@@ -24,7 +24,7 @@ def extend_dataframe(df):
     for i, row in df.iterrows():
         ean = row['EAN']  # Extract the EAN
         if pd.isna(ean):  # If EANis not provided, skip the product
-            print(f"Skipping product {i+1} because EANis not provided.")
+            print(f"Skipping product {i+1} because EAN is not provided.")
             continue
         querystring = {"q": ean, "country": "de", "language": "de"}
         try:
