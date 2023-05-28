@@ -72,6 +72,4 @@ for option in options:
     if st.button('Ask chat GPT-3.5'):
         with st.spinner('Wait for it...'):
             st.write(chat_gpt.make_response(systeminputtxt + " " + option, inputtxt))
-
-        
     st.divider()
