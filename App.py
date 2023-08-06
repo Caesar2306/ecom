@@ -262,32 +262,3 @@ if article and 'mainDetail' in article and 'prices' in article['mainDetail'] and
             st.success("Price updated successfully!")
         else:
             st.error("Failed to update price.")
-
-st.subheader('Edit Article')
-
-# Assuming the variable article contains the fetched article data
-
-def display_nested_data(data, key_prefix=""):
-    for key, value in data.items():
-        new_key = f"{key_prefix}.{key}" if key_prefix else key
-        
-        if isinstance(value, dict):
-            with st.expander(f"Edit {key}"):
-                display_nested_data(value, new_key)
-        elif isinstance(value, list):
-            # Handle lists - you might need more specific handling here
-            st.write(key)
-            for idx, item in enumerate(value):
-                with st.expander(f"Item {idx+1}"):
-                    display_nested_data(item, f"{new_key}.{idx}")
-        else:
-            # Display simple field for editing
-            data[key] = st.text_input(f"{key}", value)
-
-display_nested_data(article)
-
-# When user submits the edited data
-if st.button("Submit Changes"):
-    # Now the variable article contains the edited data
-    # You can use it to send an update request to the API
-    pass
