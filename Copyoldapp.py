@@ -8,6 +8,8 @@ import time
 import requests
 from requests.auth import HTTPBasicAuth
 
+
+
 chat_gpt = ChatGPT("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")
 
 st.set_page_config(
@@ -16,6 +18,104 @@ st.set_page_config(
    layout="wide",
    initial_sidebar_state="expanded",
 )
+
+# # Initialize session state for uploaded_file and extended_df
+# if 'uploaded_file' not in st.session_state:
+#     st.session_state.uploaded_file = None
+
+# if 'extended_df' not in st.session_state:
+#     st.session_state.extended_df = None
+
+# uploaded_file = st.file_uploader("Choose a file")
+
+# if uploaded_file is not None:
+#     df = pd.read_csv(uploaded_file, sep=';')
+#     st.session_state.uploaded_file = df
+#     st.dataframe(df)
+# else:
+#     df = pd.read_csv('inputs/output_short.csv', sep=',')
+#     st.session_state.uploaded_file = df
+#     st.write('Uploaded file not found, preset used')
+
+# if st.button('Extend file'):
+#     with st.spinner('Wait for it...'):
+#         if  st.session_state.uploaded_file is not None:
+#             st.session_state.extended_df = extend_dataframe(st.session_state.uploaded_file)  
+#             st.dataframe(st.session_state.extended_df[["EAN","artikelordernummer","Artikelname","product_description", "product_photos", "product_attributes"]])
+#             st.success('Done!')
+    
+#     if st.session_state.extended_df is not None:
+#         show_articles_information(st.session_state.extended_df)
+#         st.download_button('Download file', st.session_state.extended_df.to_csv(index=False), file_name='output.csv')
+# else:
+#     st.write('File is not extended')
+
+# # if st.session_state.extended_df is not None:
+# # else: st.write('you must download file')
+
+# tab1, tab2, tab3 = st.tabs(["options", ":chat: Chat", "🗃 Data"])
+
+# tab1.subheader("options")
+# # show_articles_information(inputdf)
+# tab2.write("tab2")
+
+# tab2.subheader(":chat: Chat")
+# with tab2.container():
+#     cols = st.columns([1,2])
+#     with cols[0].container():
+#         inputtxt = st.text_area('User Input')
+#     with cols[1].container():
+#         systeminputtxt = st.text_area('System Input')
+#     if st.button('Ask chat GPT-3.5'):
+#         with st.spinner('Wait for it...'):
+#             st.write(chat_gpt.make_response(systeminputtxt, inputtxt))
+
+
+# tab3.subheader("🗃 Data")
+# tab3.write("tab3")
+
+
+
+# if st.session_state.uploaded_file is not None:
+#     options = st.multiselect('Which columns should be analyzed?', st.session_state.uploaded_file.columns)
+# for option in options:
+#     cols = st.columns([0.5,2,1])
+#     with cols[0].container():
+#         st.write(option)
+#     with cols[1].container():
+#         inputtxt = st.text_area('User input (option information fetched automatically)' + option)
+#     with cols[2].container():
+#         systeminputtxt = st.text_area('System (Product name added automatically) ' + option)
+#     if st.button('Ask chat GPT-3.5 to update ' + option):
+#         with st.spinner('Wait for it...'):
+#             new_column = []
+#             for index, row in st.session_state.uploaded_file.iterrows():
+#                 success=False
+#                 ean = row['EAN']
+#                 while not success:
+#                     try:
+#                         extended_value = chat_gpt.make_response(systeminputtxt + " for the product " + str(row['Artikelname']), inputtxt + ' ' + str(row[option]))
+#                         new_column.append(extended_value)
+#                         st.write('trying '+str(ean))
+#                         success=True
+#                     except openai.error.RateLimitError as e:
+#                         print(f"Rate limit error: {e}. Retrying in 5 seconds...")
+#                         time.sleep(5)
+#                     except openai.error.APIError as e:
+#                         print(f"API error: {e}. Retrying in 5 seconds...")
+#                         time.sleep(5)
+#                     except Exception as e:
+#                         print(f"Unexpected error: {e}. Retrying in 5 seconds...")
+#                         time.sleep(5)
+#                         print(f"No data returned from API for product with EAN {ean}.")
+#             st.session_state.uploaded_file[option+"_extended"] = new_column
+#             with st.spinner('Waiting for updates'):
+#                 st.dataframe(st.session_state.uploaded_file[['EAN',option,option+'_extended']])
+#     st.divider()
+
+# URL and credentials
+
+
 systemSelected = st.radio("What System should I use?", ('Testsystem','localhost'))
 
 if systemSelected == 'Testsystem':
@@ -29,10 +129,6 @@ else:
 
 st.subheader('Get Products')
 # Available MySQL expressions
-
-if 'df' not in st.session_state:
-    st.session_state.df = None
-
 
 mysql_expressions = ["LIKE", "=", ">=", "<=", ">", "<", "IN"]
 
@@ -155,23 +251,19 @@ if use_limit_offset:
     limit = st.number_input("Limit:", min_value=1, max_value=10000, value=30, step=1)
     offset = st.number_input("Offset:", min_value=0, max_value=10000, value=0, step=1)
 # Button to trigger API request
-if 'df' not in st.session_state:
-    st.session_state.df = None
-
 if st.button("Get Articles") and selected_columns:
     articles = get_all_articles(selected_columns, filters, sorts, limit, offset)
     if articles:
         st.write("Displaying articles:")
         df = pd.DataFrame(articles)
-        st.session_state.df = df
         st.dataframe(df)
     else:
         st.write("Failed to retrieve articles.")
 elif not selected_columns:
     st.write("Please select at least one column.")
 
-if st.session_state.df is not None and not st.session_state.df.empty: 
-    st.data_editor(st.session_state.df, key="data_editor")
+if 'df' in locals() and not df.empty: 
+    st.data_editor(df, key="data_editor")
     st.write("Here's the session state:")
     st.write(st.session_state["data_editor"])
 
@@ -214,80 +306,53 @@ if order_numbers_input:
     else:
         st.write("Failed to retrieve articles.")
 
-
-
-#Update products using id 
-
-article = None
 st.subheader('Update Products')
+# Input for article ID
 article_id = st.text_input("Enter the article ID:")
-def get_article_by_id(article_id):
-    response = requests.get(f"{url}/{article_id}", auth=get_auth())
+
+# Function to get article by order number
+def get_article_by_order_number(order_number):
+    response = requests.get(f"{url}/{order_number}?useNumberAsId=true", auth=get_auth())
     if response.status_code == 200:
         return response.json()["data"]
     else:
         return None
 
-if article_id:
-    article = get_article_by_id(article_id)
+# Function to update article by order number
+def update_article_by_order_number(order_number, article):
+    response = requests.put(f"{url}/{order_number}?useNumberAsId=true", auth=get_auth(), json=article)
+    if response.status_code == 200:
+        return response.json()["data"]
+    else:
+        return None
+
+# Input for order number
+order_number = st.text_input("Enter the order number:")
+
+# Fetch and display article data
+if order_number:
+    article = get_article_by_order_number(order_number)
     if article is not None:
-        desired_fields = {key: article[key] for key in ["id", "name", "description", "mainDetail"]}
-        st.json(desired_fields)
-    else:
-        st.warning(f"Failed to retrieve article with ID {article_id}.")
-def update_article_price(article_id, new_price):
-    update_data = {
-        "mainDetail": {
-            "prices": [
-                {
-                    "price": new_price
-                }
-            ]
-        }
-    }
-    response = requests.put(f"{url}/{article_id}", auth=get_auth(), json=update_data)
-    if response.status_code == 200:
-        return response.json()["data"]
-    else:
-        return None
+        # Display current price
+        current_price = article['mainDetail']['prices'][0]['price']
+        st.write(f"Current price: {current_price}")
+        # Display article data
+        st.table(article)
 
-if article and 'mainDetail' in article and 'prices' in article['mainDetail'] and article['mainDetail']['prices']:
-    current_price = article['mainDetail']['prices'][0]['price']
-    st.write(f"Current price: {current_price}")
-    new_price = st.number_input("Enter the new price:", min_value=0.0, value=current_price)
-    
-    if st.button("Update price"):
-        updated_article = update_article_price(article_id, new_price)
+# Input for new price
+new_price = st.number_input("Enter the new price:", min_value=0.0)
+
+# Update price
+if st.button("Update price"):
+    if article and new_price >= 0:
+        # Copy the article data to avoid modifying the original data
+        updated_article = article.copy()
+        updated_article['mainDetail']['prices'][0]['price'] = new_price
+        updated_article = update_article_by_order_number(order_number, updated_article)
         if updated_article is not None:
             st.success("Price updated successfully!")
+            st.table(updated_article)
         else:
             st.error("Failed to update price.")
-
-st.subheader('Edit Article')
-
-# Assuming the variable article contains the fetched article data
-
-def display_nested_data(data, key_prefix=""):
-    for key, value in data.items():
-        new_key = f"{key_prefix}.{key}" if key_prefix else key
-        
-        if isinstance(value, dict):
-            with st.expander(f"Edit {key}"):
-                display_nested_data(value, new_key)
-        elif isinstance(value, list):
-            # Handle lists - you might need more specific handling here
-            st.write(key)
-            for idx, item in enumerate(value):
-                with st.expander(f"Item {idx+1}"):
-                    display_nested_data(item, f"{new_key}.{idx}")
-        else:
-            # Display simple field for editing
-            data[key] = st.text_input(f"{key}", value)
-
-display_nested_data(article)
-
-# When user submits the edited data
-if st.button("Submit Changes"):
-    # Now the variable article contains the edited data
-    # You can use it to send an update request to the API
-    pass
+    else:
+        st.error("Please enter a valid order number and price.")
