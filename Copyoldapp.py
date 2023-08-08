@@ -356,3 +356,55 @@ if st.button("Update price"):
             st.error("Failed to update price.")
     else:
         st.error("Please enter a valid order number and price.")
+
+
+ # def generate_meta_title(self, product_title, product_description):
+    #     message_content = f"Generate a meta title on german for the product with title '{product_title}' and description '{product_description}'"
+
+    #     messages = [
+    #         {"role": "system", "content": "You are given a product title and description. Your task is to generate a suitable short meta title on german for this product. Use informal style like 'du'."},
+    #         {"role": "user", "content": message_content}
+    #     ]
+    #     try:
+    #         response = openai.ChatCompletion.create(
+    #             model="gpt-4",
+    #             messages=messages,
+    #             temperature=0.5,
+    #             max_tokens=50,
+    #             top_p=1,
+    #             frequency_penalty=0.3,
+    #             presence_penalty=0
+    #         )
+    #         meta_title = response.choices[0].message['content'].strip()
+    #         return meta_title
+    #     except ValueError as ve:
+    #         if "tokens" in str(ve):
+    #             print(f"Context length error for product {product_title}: {ve}. Skipping...")
+    #             return None
+    #         else:
+    #             raise ve
+    # def generate_skin_type(self, product_title, product_description, product_attributes):
+    #     message_content = f"title: '{product_title}' description : '{product_description}' attributes: '{product_attributes}' "
+
+    #     messages = [
+    #         {"role": "system", "content": "Let's think step by step. You are analyzing product {title} (string), {description} (string)and {attributes}(json) on german to find out if this product is good for this 6 types of skin : sensitive, dry, normal, mix, fett, old or all types of skin. Keep in mind to check context to make right decision\nGive a list without any comments back.\n---\nEXPECTED OUTPUT:\n'sensitive, fett,mix'\n\nOR\n'mixed, fett,'\n\nOR\n 'sensitive, fett,mix'\n\nOR\n'all'\n---\nAfter you have the list, make sure there are only 6 skin types mentioned in the task on english divided by comma and enclosed in double quotes\n"},
+    #         {"role": "user", "content": message_content}
+    #     ]
+    #     try:
+    #         response = openai.ChatCompletion.create(
+    #             model="gpt-4",
+    #             messages=messages,
+    #             temperature=0.75,
+    #             max_tokens=256,
+    #             top_p=1,
+    #             frequency_penalty=0,
+    #             presence_penalty=0
+    #         )
+    #         skin_type = response.choices[0].message['content'].strip()
+    #         return skin_type
+    #     except ValueError as ve:
+    #         if "tokens" in str(ve):
+    #             print(f"Context length error for product's skin_type {product_title}: {ve}. Skipping...\n\n")
+    #             return None
+    #         else:
+    #             raise ve
