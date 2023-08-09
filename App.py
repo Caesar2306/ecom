@@ -5,14 +5,9 @@ import pandas as pd
 from rapidapi import extend_dataframe
 from article_info import show_articles_information
 from gpt_functions import ChatGPT
-import openai 
-import time
 import requests
 from requests.auth import HTTPBasicAuth
-import ast
-import ssl
 import os
-from PIL import Image
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -63,7 +58,7 @@ columns = [
     "lastStock", "crossBundleLook", "notification", "template", "mode", "availableFrom",
     "availableTo", "mainDetail"
 ]
-default_columns = ["id", "supplierId", "name", "description", "active", "mainDetail"]
+default_columns = ["id", "supplierId", "name", "description", "active", "mainDetail", "descriptionLong"]
 # Authentication function
 def get_auth():
     return HTTPBasicAuth(backend_username, shopware_api_key)
@@ -90,39 +85,6 @@ def get_all_articles(selected_columns, filters, sorts, limit, offset):
 
 # Multiselect box for columns
 selected_columns = st.multiselect("Select Columns", options=columns, default=default_columns)
-
-# Function to extract selected fields from article data
-def extract_article_data(article, selected_fields):
-    extracted_data = {}
-    for field in selected_fields:
-        if field in article:
-            extracted_data[field] = article[field]
-        else:
-            # Check for nested fields
-            for key, value in article.items():
-                if isinstance(value, dict) and field in value:
-                    extracted_data[field] = value[field]
-    return extracted_data
-
-# Function to get articles based on order numbers
-def get_articles_by_order_numbers(order_numbers, filters=None, sort=None, limit=None):
-    articles = []
-    for number in order_numbers:
-        params = {"useNumberAsId": "true"}
-        if filters:
-            params["filter"] = filters
-        if sort:
-            params["sort"] = sort
-        if limit:
-            params.update(limit)
-
-        response = requests.get(f"{shopware_url}articles/{number}", auth=get_auth(), params=params)
-        if response.status_code == 200:
-            articles.append(response.json())
-        else:
-            st.warning(f"Failed to retrieve article with order number {number}. Status code: {response.status_code}")
-
-    return articles
 
 # Filter options
 filters = []
@@ -170,21 +132,95 @@ offset = None
 if use_limit_offset:
     limit = st.number_input("Limit:", min_value=1, max_value=10000, value=30, step=1)
     offset = st.number_input("Offset:", min_value=0, max_value=10000, value=0, step=1)
-# Button to trigger API request
+# Buttno to trigger api request
 if 'df' not in st.session_state:
     st.session_state.df = None
 
 if st.button("Get Articles") and selected_columns:
     articles = get_all_articles(selected_columns, filters, sorts, limit, offset)
     if articles:
-        st.write("Displaying articles:")
-        df = pd.DataFrame(articles)
-        st.session_state.df = df
-        st.dataframe(df)
+        st.session_state.df = pd.DataFrame(articles)
     else:
         st.write("Failed to retrieve articles.")
+
+if 'df' in st.session_state and st.session_state.df is not None:
+    st.write("Displaying articles:")
+    st.dataframe(st.session_state.df)
+
+    # Checkbox for selecting all products
+    select_all = st.checkbox("Select All Articles for Update")
+    if 'selected_articles' not in st.session_state:
+        st.session_state.selected_articles = []
+
+    if not select_all:
+        selected_article_names = st.multiselect("Select Articles for Update", options=st.session_state.df["name"].tolist(), default=[name_to_id_mapping[id] for id in st.session_state.selected_articles])
+        
+        #  mapping from names to IDs
+        name_to_id_mapping = dict(zip(st.session_state.df["name"].tolist(), st.session_state.df["id"].tolist()))
+        
+        # get the corresponding IDs for the selected article names
+        selected_articles = [name_to_id_mapping[name] for name in selected_article_names]
+    else:
+        selected_articles = st.session_state.df["id"].tolist()
+
+    st.session_state.selected_articles = selected_articles
+    st.write(f"Selected Articles: {st.session_state.selected_articles}")
+
+    if st.button("Proceed to Update Selected Articles"):
+        st.session_state.selected_articles = selected_articles
+        st.write(f"Selected Articles: {selected_articles}")
 elif not selected_columns:
     st.write("Please select at least one column.")
+
+if 'selected_articles' in st.session_state and st.session_state.selected_articles:
+
+    # Dropdown for selecting the column to update
+    chat_input = st.columns([1,2])
+    with chat_input[0].container():
+        user_input = st.text_area('User Input')
+    with chat_input[1].container():
+        system_input = st.text_area('System Input')
+    column_to_update = st.selectbox("Select Column to Update", options=columns)
+
+    if st.button("Generate Content with ChatGPT"):
+        article_info = st.session_state.df[st.session_state.df['id'].isin(st.session_state.selected_articles)]
+        
+        # Setup the progress bar
+        total_articles = len(st.session_state.selected_articles)
+        progress_text = "Updating articles. Please wait."
+        progress_bar = st.progress(0)
+        progress_text_element = st.empty()
+
+        # Iterate over selected articles and get content for each
+        for idx, (_, row) in enumerate(article_info.iterrows()):
+            article_name = row['name']
+            article_id = row['id']
+            article_description = row['descriptionLong']
+
+            # add information to prompt for additional customization
+            modified_user_input = f"{user_input} for article {article_name} with description {article_description}"
+            modified_system_input = f"{system_input}"
+            response = chat_gpt.make_response(modified_system_input, modified_user_input)
+            
+            st.write(f"Generated Content for {article_name}:", response)
+
+            # Construct the payload for update
+            payload = {column_to_update: response}
+            
+            # update the article
+            update_response = requests.put(f"{shopware_url}articles/{article_id}", auth=get_auth(), json=payload)
+            
+            # progress bar
+            progress = (idx + 1) / total_articles
+            progress_bar.progress(progress)
+            progress_text_element.text(f"{progress_text} ({idx + 1}/{total_articles})")
+
+            if update_response.status_code == 200:
+                st.success(f"Successfully updated article with ID {article_id}")
+            else:
+                st.error(f"Failed to update article with ID {article_id}. Status Code: {update_response.status_code}")
+                
+        progress_text_element.text("Update completed!")
 
 # if st.session_state.df is not None and not st.session_state.df.empty: 
 #     st.data_editor(st.session_state.df, key="data_editor")
@@ -192,7 +228,38 @@ elif not selected_columns:
 #     st.write(st.session_state["data_editor"])
 
 # Finding product using Ordernumber
+# Function to extract selected fields from article data
+def extract_article_data(article, selected_fields):
+    extracted_data = {}
+    for field in selected_fields:
+        if field in article:
+            extracted_data[field] = article[field]
+        else:
+            # Check for nested fields
+            for key, value in article.items():
+                if isinstance(value, dict) and field in value:
+                    extracted_data[field] = value[field]
+    return extracted_data
 
+# Function to get articles based on order numbers
+def get_articles_by_order_numbers(order_numbers, filters=None, sort=None, limit=None):
+    articles = []
+    for number in order_numbers:
+        params = {"useNumberAsId": "true"}
+        if filters:
+            params["filter"] = filters
+        if sort:
+            params["sort"] = sort
+        if limit:
+            params.update(limit)
+
+        response = requests.get(f"{shopware_url}articles/{number}", auth=get_auth(), params=params)
+        if response.status_code == 200:
+            articles.append(response.json())
+        else:
+            st.warning(f"Failed to retrieve article with order number {number}. Status code: {response.status_code}")
+
+    return articles
 # List of available fields
 available_fields = [
     "id", "active", "added", "changed", "crossBundleLook", "description", 
