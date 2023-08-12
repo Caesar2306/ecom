@@ -222,10 +222,6 @@ if 'selected_articles' in st.session_state and st.session_state.selected_article
                 
         progress_text_element.text("Update completed!")
 
-# if st.session_state.df is not None and not st.session_state.df.empty: 
-#     st.data_editor(st.session_state.df, key="data_editor")
-#     st.write("Here's the session state:")
-#     st.write(st.session_state["data_editor"])
 
 # Finding product using Ordernumber
 # Function to extract selected fields from article data
@@ -347,69 +343,12 @@ if article and 'mainDetail' in article and 'prices' in article['mainDetail'] and
             st.error("Failed to update price.")
 
 
-st.subheader('Magie')
+st.subheader('Import')
 
 
+df_files = pd.read_csv("/Users/euphorika/Desktop/ecom/inputs/compagnie_de_provence_extended.csv", delimiter=';', encoding='utf-8', nrows=5)
 
-# import imageio
-# from PIL import Image
-
-# def convert_webp_to_jpg(input_path, output_path):
-#     image_data = imageio.imread(input_path)
-#     img = Image.fromarray(image_data)
-#     img.convert('RGB').save(output_path, 'JPEG')
-
-
-df_files = pd.read_csv("/Users/euphorika/Desktop/ecom/inputs/compagnie_de_provence_extended.csv", delimiter=';', encoding='utf-8', nrows=10)
-# Display the first few rows
-st.write(df_files.head())
-# def convert_to_absolute_uri(relative_path):
-#     # Get the absolute path
-#     absolute_path = os.path.abspath(relative_path)
-    
-#     # Convert to URI format
-#     uri = "file://" + absolute_path
-    
-#     return uri
-# # Helper function to download images
-# def get_image_extension_from_headers(headers):
-#     content_type = headers.get('content-type')
-#     if 'jpeg' in content_type or 'jpg' in content_type:
-#         return 'jpg'
-#     if 'png' in content_type:
-#         return 'png'
-#     if 'gif' in content_type:
-#         return 'gif'
-#     if 'webp' in content_type:
-#         return 'webp'
-#     return None  # default if we can't determine
-
-# def download_image(shopware_url, file_path_without_extension):
-#     try:
-#         # Ensure the directory exists
-#         directory = os.path.dirname(file_path_without_extension)
-#         if not os.path.exists(directory):
-#             os.makedirs(directory)
-        
-#         response = requests.get(shopware_url, stream=True)
-#         response.raise_for_status()  # Raise an error for bad responses
-        
-#         # Get image format
-#         extension = get_image_extension_from_headers(response.headers)
-#         if not extension:
-#             return
-
-#         file_path = f"{file_path_without_extension}.{extension}"
-        
-#         with open(file_path, 'wb') as file:
-#             for chunk in response.iter_content(chunk_size=8192): 
-#                 file.write(chunk)
-#                 return file_path
-                
-
-#     except Exception as e:
-#         st.error(f"Error downloading image from {shopware_url}: {e}")
-
+st.write(df_files.head(10))
 
 def add_product(data):
     response = requests.post(f"{shopware_url}articles/", auth=get_auth(), json=data)
@@ -417,15 +356,7 @@ def add_product(data):
         return True, ''
     else:
         return False, response.text  # Return the API error message
-# def add_media(image_data):
-#     st.write(urlImage)  # Print the URL
-#     response = requests.post(f"http://localhost:8000/api/media", auth=get_auth(), json=image_data)
-#     st.write(response.status_code, response.text)  # Print the status code and response text
 
-#     if response.status_code == 200 or response.status_code == 201:
-#         return response.json()['data']['id']  # Return the ID of the new media object
-#     else:
-#         return None  # Return None if the request failed
 # Add products button
 if st.button('Add Products from CSV'):
     success_count = 0
@@ -433,22 +364,17 @@ if st.button('Add Products from CSV'):
     error_messages = []
     
     for idx, row in df_files.iterrows():
-        # image_urls = ast.literal_eval(row['product_photos'])
-        # images = []
-        # for position, urlImage in enumerate(image_urls, start=1):
-        #     local_file_path = f"./images/{row['mainDetailNumber']}_{position}"
-        #     local_file_path = download_image(urlImage, local_file_path )
-            
-        #     image_data = {
-        #         "file": convert_to_absolute_uri(convert_webp_to_jpg(local_file_path, local_file_path.replace('inputs','outputs'))),
-        #         "album" : -1,
-        #         "description": f"{row['mainDetailNumber']}_{position}"
-        #     }
-        #     media_id = add_media(image_data)
-        #     st.write(f"media_id: {media_id}")  # Check the value of media_id
-        #     if media_id is not None:
-        #         images.append({"mediaId": media_id})
-        # st.write(f"images: {images}")  # Check the value of images
+        links = [link.strip(" '") for link in row['product_photos'][1:-1].split(",")]
+        images = []
+        for index, link in enumerate(links):
+            image_dict = {
+                "link": link,
+                "description": f"{row['mainDetailNumber']}_{index+1}"
+            }
+            if index == 0:
+                image_dict["main"] = 1
+            images.append(image_dict)
+
         product_data = {
             'name': row['name'],
             'taxId': 1,
@@ -469,7 +395,7 @@ if st.button('Add Products from CSV'):
                     }
                 ]
             },
-            # 'images': images, 
+            'images': images, 
             'seoCategories': [
                 {
                     "shopId": 1,
