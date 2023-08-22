@@ -1,34 +1,20 @@
+
 import streamlit as st
 import pandas as pd
 import requests
-from requests.auth import HTTPBasicAuth
-import os
-from dotenv import load_dotenv
-load_dotenv()
-# Access the environment variables
-chat_gpt_api = os.getenv('CHATGPT_API_KEY')
-backend_username = os.getenv('BACKEND_USERNAME')
-rapid_api = os.getenv('RAPID_API_KEY')
-testsystem_api = os.getenv('TESTSYSTEM_API')
-testsystem_url = os.getenv('TESTSYSTEM_URL')
-localsystem_api = os.getenv('LOCALSYSTEM_API')
-localsystem_url = os.getenv('LOCALSYSTEM_URL')
-
-
-def import_products_page():
-    st.title("Import Products")
-    df_files = pd.read_csv("/Users/euphorika/Desktop/ecom/inputs/compagnie_de_provence_extended.csv", delimiter=';', encoding='utf-8', nrows=5)
-
-    st.write(df_files.head(10))
+from env_utilities import get_chat_gpt_api_key, get_backend_username, get_rapid_api_key, get_testsystem_api, get_testsystem_url, get_localsystem_api, get_localsystem_url
+from shared_functions import get_auth, get_auth_local
 
 def add_product(data):
-    response = requests.post(f"{st.session_state.shopware_url}articles/", auth=get_auth(), json=data)
+    response = requests.post(f"{get_localsystem_url()}articles/", auth=get_auth_local(), json=data)
     if response.status_code == 200 or response.status_code == 201:
         return True, ''
     else:
         return False, response.text  # Return the API error message
-
-    # Add products button
+    
+st.title("Import Products")
+df_files = pd.read_csv("/Users/euphorika/Desktop/ecom/inputs/compagnie_de_provence_extended.csv", delimiter=';', encoding='utf-8', nrows=5)
+st.write(df_files.head(10))
 if st.button('Add Products from CSV'):
     success_count = 0
     failed_rows = []
