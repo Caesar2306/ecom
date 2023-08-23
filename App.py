@@ -6,11 +6,11 @@ from rapidapi import extend_dataframe
 from article_info import show_articles_information
 import os
 from dotenv import load_dotenv
-from parts.get_products import get_products
-from parts.update_products import update_products
-from parts.delete_products import delete_products
-from parts.import_products import import_products
-from parts.chat_GPT import chat_GPT
+from functions.get_products import get_products
+from functions.update_products import update_products
+from functions.delete_products import delete_products
+from functions.import_products import import_products
+from functions.chat_GPT import chat_GPT
 from env_utilities import get_backend_username,get_rapid_api_key,get_testsystem_api,get_testsystem_url,get_localsystem_api,get_localsystem_url,get_chat_gpt_api_key
 load_dotenv()
 
