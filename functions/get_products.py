@@ -4,6 +4,54 @@ import pandas as pd
 import requests
 from shared_functions import get_auth
 
+def get_filters(columns, mysql_expressions):
+    filters = []
+    use_filter = st.checkbox("Use Filter", key="Use filter get_product")
+    if use_filter:
+        st.write("Filters:")
+        filter_count = st.number_input("Number of Filters:", min_value=1, max_value=5, value=1, step=1)
+        for i in range(filter_count):
+            cols = st.columns(4)
+            property_filter = cols[0].selectbox(f"Property {i+1}", options=columns, index=0, key=f"property{i}")
+            expression_filter = cols[1].selectbox(f"Expression {i+1}", options=mysql_expressions, index=0, key=f"expression{i}")
+            value_filter = cols[2].text_input(f"Value {i+1}", key=f"value{i}")
+            operator_filter = cols[3].selectbox(f"Operator {i+1} ('AND': AND, 'OR': OR)", options=['AND', 'OR'], index=0, key=f"operator{i}")
+            use_operator = cols[3].checkbox("Use Operator", key=f"use_operator{i}")
+            if property_filter and value_filter:
+                filter_dict = {
+                    "property": property_filter,
+                    "expression": expression_filter,
+                    "value": value_filter,
+                }
+                if use_operator:
+                    filter_dict["operator"] = operator_filter
+                filters.append(filter_dict)
+    return filters
+def get_limit_offset():
+    use_limit_offset = st.checkbox("Use Limit/Offset",key="Use Limit get_product")
+    limit = 30
+    offset = None
+    if use_limit_offset:
+        limit = st.number_input("Limit:", min_value=1, max_value=10000, value=30, step=1)
+        offset = st.number_input("Offset:", min_value=0, max_value=10000, value=0, step=1)
+    return limit, offset
+def get_sorts(columns):
+    sorts = []
+    use_sort = st.checkbox("Use Sort",key="Use Sort get_product")
+    if use_sort:
+        st.write("Sorts:")
+        sort_count = st.number_input("Number of Sorts:", min_value=1, max_value=5, value=1, step=1)
+        for i in range(sort_count):
+            cols = st.columns(2)
+            property_sort = cols[0].selectbox(f"Sort Property {i+1}", options=columns, index=0, key=f"sort_property{i}")
+            direction_sort = cols[1].selectbox(f"Direction {i+1}", options=["ASC", "DESC"], index=0, key=f"direction{i}")
+            if property_sort:
+                sorts.append({
+                    "property": property_sort,
+                    "direction": direction_sort
+                })
+    return sorts
+
 def get_all_articles(selected_columns, filters, sorts, limit, offset):
     params = {}
     if filters:
@@ -76,51 +124,11 @@ def get_products():
     selected_columns = st.multiselect("Select Columns", options=columns, default=default_columns, key="get_products_column")
 
     # Filter options
-    filters = []
-    use_filter = st.checkbox("Use Filter", key="Use filter get_product")
-    if use_filter:
-        st.write("Filters:")
-        filter_count = st.number_input("Number of Filters:", min_value=1, max_value=5, value=1, step=1)
-        for i in range(filter_count):
-            cols = st.columns(4)
-            property_filter = cols[0].selectbox(f"Property {i+1}", options=columns, index=0, key=f"property{i}")
-            expression_filter = cols[1].selectbox(f"Expression {i+1}", options=mysql_expressions, index=0, key=f"expression{i}")
-            value_filter = cols[2].text_input(f"Value {i+1}", key=f"value{i}")
-            operator_filter = cols[3].selectbox(f"Operator {i+1} ('AND': AND, 'OR': OR)", options=['AND', 'OR'], index=0, key=f"operator{i}")
-            use_operator = cols[3].checkbox("Use Operator", key=f"use_operator{i}")
-            if property_filter and value_filter:
-                filter_dict = {
-                    "property": property_filter,
-                    "expression": expression_filter,
-                    "value": value_filter,
-                }
-                if use_operator:
-                    filter_dict["operator"] = operator_filter
-                filters.append(filter_dict)
+    filters = get_filters(columns, mysql_expressions)
 
     # Sort options
-    sorts = []
-    use_sort = st.checkbox("Use Sort",key="Use Sort get_product")
-    if use_sort:
-        st.write("Sorts:")
-        sort_count = st.number_input("Number of Sorts:", min_value=1, max_value=5, value=1, step=1)
-        for i in range(sort_count):
-            cols = st.columns(2)
-            property_sort = cols[0].selectbox(f"Sort Property {i+1}", options=columns, index=0, key=f"sort_property{i}")
-            direction_sort = cols[1].selectbox(f"Direction {i+1}", options=["ASC", "DESC"], index=0, key=f"direction{i}")
-            if property_sort:
-                sorts.append({
-                    "property": property_sort,
-                    "direction": direction_sort
-                })
-
-    # Limit and Offset options
-    use_limit_offset = st.checkbox("Use Limit/Offset",key="Use Limit get_product")
-    limit = 30
-    offset = None
-    if use_limit_offset:
-        limit = st.number_input("Limit:", min_value=1, max_value=10000, value=30, step=1)
-        offset = st.number_input("Offset:", min_value=0, max_value=10000, value=0, step=1)
+    sorts = get_sorts(columns)
+    limit, offset = get_limit_offset()
     # Buttno to trigger api request
     if 'df' not in st.session_state:
         st.session_state.df = None
