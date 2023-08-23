@@ -4,23 +4,34 @@ import streamlit as st
 import pandas as pd
 from rapidapi import extend_dataframe
 from article_info import show_articles_information
-from gpt_functions import ChatGPT
-import requests
-from requests.auth import HTTPBasicAuth
 import os
 from dotenv import load_dotenv
+from parts.get_products import get_products
+from parts.update_products import update_products
+from parts.delete_products import delete_products
+from parts.import_products import import_products
+from parts.chat_GPT import chat_GPT
+from env_utilities import get_backend_username,get_rapid_api_key,get_testsystem_api,get_testsystem_url,get_localsystem_api,get_localsystem_url,get_chat_gpt_api_key
 load_dotenv()
 
+st.set_page_config(
+   page_title="Product Extender",
+   page_icon=":smile:",
+   layout="wide",
+   initial_sidebar_state="expanded",
+)
 
 # Access the environment variables
-chat_gpt_api = os.getenv('CHATGPT_API_KEY')
-backend_username = os.getenv('BACKEND_USERNAME')
+
+chat_gpt_api = get_chat_gpt_api_key()
+backend_username = get_backend_username()
+rapid_api = get_rapid_api_key()
+testsystem_api = get_testsystem_api()
+testsystem_url = get_testsystem_url()
+localsystem_api = get_localsystem_api()
+localsystem_url = get_localsystem_url()
+
 st.session_state.backend_username = backend_username
-rapid_api = os.getenv('RAPID_API_KEY')
-testsystem_api = os.getenv('TESTSYSTEM_API')
-testsystem_url = os.getenv('TESTSYSTEM_URL')
-localsystem_api = os.getenv('LOCALSYSTEM_API')
-localsystem_url = os.getenv('LOCALSYSTEM_URL')
 
 if 'backend_username' not in st.session_state:
     st.session_state.backend_username = None
@@ -29,13 +40,6 @@ if 'shopware_api_key' not in st.session_state:
 if 'shopware_url' not in st.session_state:
     st.session_state.shopware_url = None
 
-
-st.set_page_config(
-   page_title="Product Extender",
-   page_icon=":smile:",
-   layout="wide",
-   initial_sidebar_state="expanded",
-)
 
 
 st.sidebar.title("Navigation")
@@ -47,6 +51,19 @@ if systemSelected == 'Testsystem':
 else: 
     st.session_state.shopware_api_key = localsystem_api
     st.session_state.shopware_url = localsystem_url
+
+selection = st.sidebar.radio("Pages:", ["Get Products", "Update Products", "Import Products", "Delete Products","Chat GPT"])
+
+if selection == "Get Products":
+    get_products()
+elif selection == "Update Products":
+    update_products()
+elif selection == "Import Products":
+    import_products()
+elif selection == "Chat GPT":
+    chat_GPT()
+else:
+    delete_products()
 
 
 #cache for df if provided
