@@ -2,11 +2,10 @@
 import streamlit as st
 import pandas as pd
 import requests
-from env_utilities import get_localsystem_url
-from shared_functions import get_auth_local
+from shared_functions import get_auth
 def import_products():
     def add_product(data):
-        response = requests.post(f"{get_localsystem_url()}articles/", auth=get_auth_local(), json=data)
+        response = requests.post(f"{st.session_state.shopware_url}articles/", auth=get_auth(), json=data)
         if response.status_code == 200 or response.status_code == 201:
             return True, ''
         else:

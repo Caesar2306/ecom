@@ -102,10 +102,7 @@ def get_articles_by_order_numbers(order_numbers, filters=None, sort=None, limit=
             st.warning(f"Failed to retrieve article with order number {number}. Status code: {response.status_code}")
 
     return articles
-# Available columns
-def get_products():
-    st.title("Get Products")
-
+def get_articles_df_save_to_cache():
     mysql_expressions = ["LIKE", "=", ">=", "<=", ">", "<", "IN"]
     columns = [
         "id", "mainDetailId", "supplierId", "taxId", "priceGroupId", "filterGroupId",
@@ -115,9 +112,6 @@ def get_products():
         "availableTo", "mainDetail"
     ]
     default_columns = ["id", "supplierId", "name", "description", "active", "mainDetail", "descriptionLong"]
-    # Authentication function
-
-    # Get articles function with filter, sort, limit, and offset
 
 
     # Multiselect box for columns
@@ -130,6 +124,7 @@ def get_products():
     sorts = get_sorts(columns)
     limit, offset = get_limit_offset()
     # Buttno to trigger api request
+
     if 'df' not in st.session_state:
         st.session_state.df = None
 
@@ -137,8 +132,15 @@ def get_products():
         articles = get_all_articles(selected_columns, filters, sorts, limit, offset)
         if articles:
             st.session_state.df = pd.DataFrame(articles)
+            st.session_state.selected_columns = selected_columns
+            st.session_state.columns = columns
         else:
             st.write("Failed to retrieve articles.")
+# Available columns
+def get_products():
+    st.title("Get Products")
+
+    get_articles_df_save_to_cache()
 
     if 'df' in st.session_state and st.session_state.df is not None:
         st.write("Displaying articles:")
