@@ -1,10 +1,6 @@
 
 
 import streamlit as st
-import pandas as pd
-from rapidapi import extend_dataframe
-from article_info import show_articles_information
-import os
 from dotenv import load_dotenv
 from functions.get_products import get_products
 from functions.update_products import update_products

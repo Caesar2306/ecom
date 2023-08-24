@@ -4,9 +4,9 @@ import pandas as pd
 import requests
 from shared_functions import get_auth
 
-def get_filters(columns, mysql_expressions):
+def get_filters(columns, mysql_expressions,key):
     filters = []
-    use_filter = st.checkbox("Use Filter", key="Use filter get_product")
+    use_filter = st.checkbox("Use Filter", key=key)
     if use_filter:
         st.write("Filters:")
         filter_count = st.number_input("Number of Filters:", min_value=1, max_value=5, value=1, step=1)
@@ -118,7 +118,7 @@ def get_articles_df_save_to_cache():
     selected_columns = st.multiselect("Select Columns", options=columns, default=default_columns, key="get_products_column")
 
     # Filter options
-    filters = get_filters(columns, mysql_expressions)
+    filters = get_filters(columns, mysql_expressions,key="get_by_id")
 
     # Sort options
     sorts = get_sorts(columns)
@@ -157,6 +157,7 @@ def get_products():
         "images", "links", "mainDetail", "propertyGroup", "propertyValues",
         "seoCategories", "similar", "supplier", "tax", "template"
     ]
+    mysql_expressions = ["LIKE", "=", ">=", "<=", ">", "<", "IN"]
     st.subheader('Find product using Ordernumber')
     # Multi-select input in Streamlit
     selected_fields = st.multiselect(
@@ -167,7 +168,7 @@ def get_products():
     order_numbers_input = st.text_input("Enter Article Order Numbers (comma separated):")
     if order_numbers_input:
         order_numbers = [number.strip() for number in order_numbers_input.split(",")]
-
+        filters = get_filters(available_fields, mysql_expressions,key="get_by_on")
         # Retrieve articles based on order numbers
         articles = get_articles_by_order_numbers(order_numbers, filters=filters)  # Add sort and limit if needed
 
