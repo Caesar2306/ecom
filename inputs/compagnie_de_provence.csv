@@ -1,129 +1,128 @@
-Kategorie;Artikel-Nr.;Bild;Produkt;EAN ;Größe;EK*;UVP**;VE;Menge;Gesamt
-SENSITIVE;PF0118SL500SA;nan;Liquid Marseille Soap 495ml Sensitive Skin;3551780010842;495ml;12,50 €;25,00 €;6;3.0;37,50 €
-SENSITIVE;PF0118SL01LSA;nan;Liquid Marseille Soap 1L Refill Sensitive Skin;3551780010859;1000ml;17,00 €;34,00 €;6;nan; 	-     
-SENSITIVE;PF0118SL300SA;nan;Liquid Marseille Soap 300ml Sensitive Skin;3551780010866;300ml;9,00 €;18,00 €;6;3.0;27,00 €
-SENSITIVE;PF0118SS085SA;nan;Solid Face Cleanser 85g Sensitive Skin;3551780010873;85g;11,50 €;23,00 €;6;3.0;34,50 €
-FACECARE;PF0115CV050AV;nan;Face Cream Sorbet Cream 50ml SEAWEED;3551780007095;50ml;16,00 €;32,00 €;6;nan; 	-     
-FACECARE;PF0105CV050KA;nan;Face Cream Silky Cream 50ml KARITE | SHEA;3551780008351;50ml;16,00 €;32,00 €;6;nan; 	-     
-FACECARE;PF0113HD140SK;nan;Cleansing Oil 140ml;3551780007507;140ml;16,00 €;32,00 €;6;nan; 	-     
-FACECARE;PF0113CV050FI;nan;Light Face Cream 50ml FIG ANTIOXYDANTE;3551780005725;50ml;25,00 €;50,00 €;6;nan; 	-     
-FACECARE;PF0113SE030FI;nan;Face Serum in Oil 30ml FIG ANTIOXYDANTE;3551780005701;30ml;26,00 €;52,00 €;6;nan; 	-     
-FACECARE;PF0113MV075FI;nan;Sleeping Face Mask 75ml FIG ANTIOXYDANTE;3551780005718;75ml;22,50 €;45,00 €;6;nan; 	-     
-LIMITED EDITION;PF0109SL500BS;nan;Liquid Soap Marseille 495ml FESTIVE PINE;3551780009495;495 ml;13,50 €;27,00 €;6;3.0;40,50 €
-LIMITED EDITION;PF0109SL500BE;nan;Liquid Soap Marseille 495ml WOODS & SPICES;3551780009501;495 ml;13,50 €;27,00 €;6;3.0;40,50 €
-LIMITED EDITION;PF0109BP150BS;nan;Scented Candle 150g FESTIVE PINE;3551780009518;150 gr;24,50 €;49,00 €;6;3.0;73,50 €
-GIFT SETS;CO0105MU20221;nan;SHEA ESSENTIALS 2022 (Shower Oil 30ml, Handcream 30ml & Dry Oil 100ml);3551780009600;1 Stk.;29,50 €;59,00 €;4;nan; 	-     
-GIFT SETS;CO0103TN20221;nan;SOFT SKIN KIT - BLACK TEA 2022(Liquid Soap 495ml & Handcream 300ml);3551780009426;1 Stk.;26,50 €;53,00 €;4;nan; 	-     
-SEAWEED;PF0115CC200AV;nan;Ultra-Hydrating Body Cream 200ml SEAWEED;3551780007101;200ml;21,00 €;42,00 €;6;3.0;63,00 €
-SEAWEED;PF0115CM075AV;nan;Ultra-Hydrating Hand Cream 75ml SEAWEED;3551780007132;75ml;11,00 €;22,00 €;6;3.0;33,00 €
-SEAWEED;PF0115CM030AV;nan;Ultra-Hydrating Hand Cream 30ml SEAWEED;3551780007118;30ml;4,75 €;9,50 €;12;6.0;28,50 €
-SEAWEED;PF0115SL300AV;nan;Liquid Soap Marseille 300ml SEAWEED;3551780009563;300 ml;11,00 €;22,00 €;6;3.0;33,00 €
-SEAWEED;PF0115SL500AV;nan;Liquid Soap Marseille 495ml SEAWEED;3551780007088;495ml;13,50 €;27,00 €;6;3.0;40,50 €
-SEAWEED;PF0115SL01LAV;nan;Liquid Soap Marseille 1L SEAWEED;3551780007392;1000ml;18,00 €;36,00 €;6;nan; 	-     
-SEAWEED;PF0115SL03LAV;nan;Liquid Soap Marseille 3L Refill SEAWEED(Wird erst auf Anfrage bestellt);3551780009716;3 L;42,50 €;85,00 €;3;nan; 	-     
-E X T R A  P U R;PF0101SL500EX;nan;Liquid Soap Marseille 495ml;3551780004483;495 ml;15,50 €;31,00 €;6;3.0;46,50 €
-E X T R A  P U R;PF0101SL300EX;nan;Liquid Soap Marseille 300ml PET;3551780005367;300 ml;12,00 €;24,00 €;6;3.0;nan
-E X T R A  P U R;PF0101SL03LEX;nan;Exfoliating Liquid Soap Marseille 3L Refill(Wird erst auf Anfrage bestellt);3551780009709;3 L;45,00 €;90,00 €;3;nan; 	-     
-FLÜSSIGSEIFE;PF0101SL300RV;nan;Liquid Soap Marseille 300ml REVITALIZING ROSEMARY;3551780007729;300ml;9,00 €;18,00 €;6;3.0;27,00 €
-FLÜSSIGSEIFE;PF0101SL300ME;nan;Liquid Soap Marseille 300ml MEDITERRANEAN SEA;3551780000263;300ml;9,00 €;18,00 €;6;3.0;27,00 €
-FLÜSSIGSEIFE;PF0101SL300LA;nan;Liquid Soap Marseille 300ml AROMATIC LAVENDER;3551780000256;300ml;9,00 €;18,00 €;6;3.0;27,00 €
-FLÜSSIGSEIFE;PF0101SL300FI;nan;Liquid Soap Marseille 300ml FIG OF PROVENCE;3551780000232;300ml;9,00 €;18,00 €;6;3.0;27,00 €
-FLÜSSIGSEIFE;PF0101SL300RO;nan;Liquid Soap Marseille 300ml WILD ROSE;3551780000294;300ml;9,00 €;18,00 €;6;3.0;27,00 €
-FLÜSSIGSEIFE;PF0101SL300VE;nan;Liquid Soap Marseille 300ml FRESH VERBENA;3551780000300;300ml;9,00 €;18,00 €;6;3.0;27,00 €
-FLÜSSIGSEIFE;PF0101SL300PA;nan;Liquid Soap Marseille 300ml PINK GRAPEFRUIT;3551780000287;300ml;9,00 €;18,00 €;6;3.0;27,00 €
-FLÜSSIGSEIFE;PF0101SL300CO;nan;Liquid Soap Marseille 300ml COTTON FLOWER;3551780000225;300ml;9,00 €;18,00 €;6;3.0;27,00 €
-FLÜSSIGSEIFE;PF0101SL300BO;nan;Liquid Soap Marseille 300ml OLIVE WOOD;3551780000218;300ml;9,00 €;18,00 €;6;3.0;27,00 €
-500 ml Flüssigseife;PF0101SL500RV;nan;Liquid Soap Marseille 495ml REVITALIZING ROSEMARY;3551780007712;495ml;12,50 €;25,00 €;6;3.0;37,50 €
-500 ml Flüssigseife;PF0101SL500ME;nan;Liquid Soap Marseille 495ml MEDITERRANEAN SEA;3551780000164;495ml;12,50 €;25,00 €;6;3.0;37,50 €
-500 ml Flüssigseife;PF0101SL500LA;nan;Liquid Soap Marseille 495ml AROMATIC LAVENDER;3551780000157;495ml;12,50 €;25,00 €;6;3.0;37,50 €
-500 ml Flüssigseife;PF0101SL500FI;nan;Liquid Soap Marseille 495ml FIG OF PROVENCE;3551780000133;495ml;12,50 €;25,00 €;6;3.0;37,50 €
-500 ml Flüssigseife;PF0101SL500RO;nan;Liquid Soap Marseille 495ml WILD ROSE;3551780000195;495ml;12,50 €;25,00 €;6;3.0;37,50 €
-500 ml Flüssigseife;PF0101SL500VE;nan;Liquid Soap Marseille 495ml FRESH VERBENA;3551780000201;495ml;12,50 €;25,00 €;6;3.0;37,50 €
-500 ml Flüssigseife;PF0101SL500PA;nan;Liquid Soap Marseille 495ml PINK GRAPEFRUIT;3551780000188;495ml;12,50 €;25,00 €;6;3.0;37,50 €
-500 ml Flüssigseife;PF0101SL500CO;nan;Liquid Soap Marseille 495ml COTTON FLOWER;3551780000126;495ml;12,50 €;25,00 €;6;3.0;37,50 €
-500 ml Flüssigseife;PF0101SL500BO;nan;Liquid Soap Marseille 495ml OLIVE WOOD;3551780000119;495ml;12,50 €;25,00 €;6;3.0;37,50 €
-1000 ml Flüssigseife-Refill;PF0101SL01LRV;nan;Liquid Soap Marseille 1L Refill REVITALIZING ROSEMARY;3551780007705;1000ml;17,00 €;34,00 €;6;nan; 	-     
-1000 ml Flüssigseife-Refill;PF0101SL01LME;nan;Liquid Soap Marseille 1L Refill MEDITERRANEAN SEA;3551780000065;1000 ml;17,00 €;34,00 €;6;nan; 	-     
-1000 ml Flüssigseife-Refill;PF0101SL01LLA;nan;Liquid Soap Marseille 1L Refill AROMATIC LAVENDER;3551780000058;1000 ml;17,00 €;34,00 €;6;nan; 	-     
-1000 ml Flüssigseife-Refill;PF0101SL01LFI;nan;Liquid Soap Marseille 1L Refill FIG OF PROVENCE;3551780000034;1000 ml;17,00 €;34,00 €;6;nan; 	-     
-1000 ml Flüssigseife-Refill;PF0101SL01LRO;nan;Liquid Soap Marseille 1L Refill WILD ROSE;3551780000096;1000 ml;17,00 €;34,00 €;6;nan; 	-     
-1000 ml Flüssigseife-Refill;PF0101SL01LVE;nan;Liquid Soap Marseille 1L Refill FRESH VERBENA;3551780000102;1000 ml;17,00 €;34,00 €;6;nan; 	-     
-1000 ml Flüssigseife-Refill;PF0101SL01LPA;nan;Liquid Soap Marseille 1L Refill PINK GRAPEFRUIT;3551780000089;1000 ml;17,00 €;34,00 €;6;nan; 	-     
-1000 ml Flüssigseife-Refill;PF0101SL01LCO;nan;Liquid Soap Marseille 1L Refill COTTON FLOWER;3551780000027;1000 ml;17,00 €;34,00 €;6;nan; 	-     
-1000 ml Flüssigseife-Refill;PF0101SL01LBO;nan;Liquid Soap Marseille 1L Refill OLIVE WOOD;3551780000010;1000 ml;17,00 €;34,00 €;6;nan; 	-     
-3 L Flüssigseife-Refill;PF0101SL03LCO;nan;Liquid Soap Marseille 3L Refill COTTON FLOWER (Wird erst auf Anfrage bestellt);3551780009686;3 L;35,00 €;70,00 €;3;nan; 	-     
-3 L Flüssigseife-Refill;PF0101SL03LVE;nan;"Liquid Soap Marseille 3L Refill FRESH VERBENA 
-(Wird erst auf Anfrage bestellt)";3551780009693;3 L;35,00 €;70,00 €;3;nan; 	-     
-100 g Stückseife;PF0101SS100ME;nan;Scented Soap 100g MEDITERRANEAN SEA;3551780000461;100g;3,50 €;7,00 €;12;6.0;21,00 €
-100 g Stückseife;PF0101SS100LA;nan;Scented Soap 100g AROMATIC LAVENDER;3551780000454;100g;3,50 €;7,00 €;12;6.0;21,00 €
-100 g Stückseife;PF0101SS100FI;nan;Scented Soap 100g FIG OF PROVENCE;3551780000430;100g;3,50 €;7,00 €;12;6.0;21,00 €
-100 g Stückseife;PF0101SS100RO;nan;Scented Soap 100g WILD ROSE;3551780000492;100g;3,50 €;7,00 €;12;6.0;21,00 €
-100 g Stückseife;PF0101SS100VE;nan;Scented Soap 100g FRESH VERBENA;3551780000508;100g;3,50 €;7,00 €;12;6.0;21,00 €
-100 g Stückseife;PF0101SS100PA;nan;Scented Soap 100g PINK GRAPEFRUIT;3551780000485;100g;3,50 €;7,00 €;12;6.0;21,00 €
-100 g Stückseife;PF0101SS100CO;nan;Scented Soap 100g COTTON FLOWER;3551780000423;100g;3,50 €;7,00 €;12;6.0;21,00 €
-100 g Stückseife;PF0101SS100BO;nan;Scented Soap 100g OLIVE WOOD;3551780000416;100g;3,50 €;7,00 €;12;6.0;21,00 €
-HANDCREME;PF0101CM100ME;nan;Hand Cream 100ml MEDITERRANEAN SEA;3551780000669;100ml;11,50 €;23,00 €;6;3.0;34,50 €
-HANDCREME;PF0101CM100LA;nan;Hand Cream 100ml AROMATIC LAVENDER;3551780000652;100ml;11,50 €;23,00 €;6;3.0;34,50 €
-HANDCREME;PF0101CM100FI;nan;Hand Cream 100ml FIG OF PROVENCE;3551780000638;100ml;11,50 €;23,00 €;6;3.0;34,50 €
-HANDCREME;PF0101CM100RO;nan;Hand Cream 100ml WILD ROSE;3551780000690;100ml;11,50 €;23,00 €;6;3.0;34,50 €
-HANDCREME;PF0101CM100VE;nan;Hand Cream 100ml FRESH VERBENA;3551780000706;100ml;11,50 €;23,00 €;6;3.0;34,50 €
-HANDCREME;PF0101CM100FO;nan;Hand Cream 100ml ORANGE BLOSSOM***;3551780000645;100ml;11,50 €;23,00 €;6;3.0;34,50 €
-HANDCREME;PF0101CM100PA;nan;Hand Cream 100ml PINK GRAPEFRUIT;3551780000683;100ml;11,50 €;23,00 €;6;3.0;34,50 €
-HANDCREME;PF0101CM100CO;nan;Hand Cream 100ml COTTON FLOWER;3551780000621;100ml;11,50 €;23,00 €;6;3.0;34,50 €
-HANDCREME;PF0101CM100BO;nan;Hand Cream 100ml OLIVE WOOD;3551780000614;100ml;11,50 €;23,00 €;6;3.0;34,50 €
-30 ml Handcreme;PF0101CM030RV;nan;Hand Cream 30ml REVITALIZING ROSEMARY;3551780007477;30ml;4,75 €;9,50 €;12;6.0;28,50 €
-30 ml Handcreme;PF0101CM030AM;nan;Hand Cream 30ml SWEET ALMOND***;3551780003851;30ml;4,75 €;9,50 €;12;6.0;28,50 €
-30 ml Handcreme;PF0101CM030ME;nan;Hand Cream 30ml MEDITERRANEAN SEA;3551780000768;30ml;4,75 €;9,50 €;12;6.0;28,50 €
-30 ml Handcreme;PF0101CM030LA;nan;Hand Cream 30ml AROMATIC LAVENDER;3551780000751;30ml;4,75 €;9,50 €;12;6.0;28,50 €
-30 ml Handcreme;PF0101CM030FI;nan;Hand Cream 30ml FIG OF PROVENCE;3551780000737;30ml;4,75 €;9,50 €;12;6.0;28,50 €
-30 ml Handcreme;PF0101CM030RO;nan;Hand Cream 30ml WILD ROSE;3551780000799;30ml;4,75 €;9,50 €;12;6.0;28,50 €
-30 ml Handcreme;PF0101CM030VE;nan;Hand Cream 30ml FRESH VERBENA;3551780000805;30ml;4,75 €;9,50 €;12;6.0;28,50 €
-30 ml Handcreme;PF0101CM030PA;nan;Hand Cream 30ml PINK GRAPEFRUIT;3551780000782;30ml;4,75 €;9,50 €;12;6.0;28,50 €
-30 ml Handcreme;PF0101CM030MI;nan;Hand Cream 30ml MIMOSA FLOWER***;3551780003899;30ml;4,75 €;9,50 €;12;6.0;28,50 €
-30 ml Handcreme;PF0101CM030CO;nan;Hand Cream 30ml COTTON FLOWER;3551780000720;30ml;4,75 €;9,50 €;12;6.0;28,50 €
-30 ml Handcreme;PF0101CM030BO;nan;Hand Cream 30ml OLIVE WOOD;3551780000713;30ml;4,75 €;9,50 €;12;6.0;28,50 €
-DUSCHGEL;PF0101GD500AG;nan;Shower Gel 500ml SPARKLING CITRUS;3551780006098;500ml;14,00 €;28,00 €;6;3.0;42,00 €
-DUSCHGEL;PF0101GD500CO;nan;Shower Gel 500ml COTTON FLOWER;3551780006104;500ml;14,00 €;28,00 €;6;3.0;42,00 €
-DUSCHGEL;PF0101GD200AG;nan;Shower Gel 200ml SPARKLING CITRUS;3551780006869;200ml;6,00 €;12,00 €;6;3.0;18,00 €
-HAND- UND KÖRPERLOTION;PF0101MC300RV;nan;Hand and Body Lotion 300ML REVITALIZING ROSEMARY;3551780007514;300ml;18,50 €;37,00 €;6;3.0; 	-     
-HAND- UND KÖRPERLOTION;PF0101MC300AG;nan;Hand and Body Lotion 300ML PET SPARKLING CITRUS;3551780006111;300 ml;18,50 €;37,00 €;6;3.0; 	-     
-HAND- UND KÖRPERLOTION;PF0101MC300CO;nan;Hand and Body Lotion 300ML PET COTTON FLOWER;3551780006128;300 ml;18,50 €;37,00 €;6;3.0; 	-     
-FLÜSSIGSEIFE;PF0112SL01LDE;nan;Liquid Soap Marseille 1L Refill REFILL DELICATE;3551780003622;1000ml;17,50 €;35,00 €;6;nan; 	-     
-FLÜSSIGSEIFE;PF0112SL01LCS;nan;Liquid Soap Marseille 1L Refill CASHMERE;3551780003639;1000ml;17,50 €;35,00 €;6;nan; 	-     
-FLÜSSIGSEIFE;PF0112SL300DE;nan;Liquid Soap Marseille 300ml DELICATE;3551780003585;300ml;11,00 €;22,00 €;6;3.0;33,00 €
-FLÜSSIGSEIFE;PF0112SL300CS;nan;Liquid Soap Marseille 300ml CASHMERE;3551780003592;300ml;11,00 €;22,00 €;6;3.0;33,00 €
-HANDCREME;PF0112CM300DE;nan;Hand Cream 300ml DELICATE;3551780003608;300ml;16,50 €;33,00 €;6;3.0;49,50 €
-HANDCREME;PF0112CM300CS;nan;Hand Cream 300ml CASHMERE;3551780003615;300ml;16,50 €;33,00 €;6;3.0;49,50 €
-FLÜSSIGSEIFE;PF0103SL01LTB1;nan;Liquid Soap Marseille 1L Refill WHITE TEA;3551780003134;1000ml;17,50 €;35,00 €;6;nan; 	-     
-FLÜSSIGSEIFE;PF0103SL01LTN1;nan;Liquid Soap Marseille 1L Refill REFILL BLACK TEA;3551780003158;1000ml;17,50 €;35,00 €;6;nan; 	-     
-FLÜSSIGSEIFE;CDP69522;nan;Liquid Soap Marseille 495ml WHITE TEA;3551780695223;500ml;13,00 €;26,00 €;6;3.0;39,00 €
-FLÜSSIGSEIFE;CDP69523;nan;Liquid Soap Marseille 495ml BLACK TEA;3551780695230;500ml;13,00 €;26,00 €;6;3.0;39,00 €
-FLÜSSIGSEIFE;CDP69422;nan;Liquid Soap Marseille 300ml WHITE TEA;3551780694226;300ml;11,00 €;22,00 €;6;3.0;33,00 €
-FLÜSSIGSEIFE;CDP69423;nan;Liquid Soap Marseille 300ml BLACK TEA;3551780694233;300ml;11,00 €;22,00 €;6;3.0;33,00 €
-HANDCREME;CDP69722;nan;Hand Cream 300ml WHITE TEA;3551780697227;300ml;16,50 €;33,00 €;6;3.0;49,50 €
-HANDCREME;CDP69723;nan;Hand Cream 300ml BLACK TEA;3551780697234;300ml;16,50 €;33,00 €;6;3.0;49,50 €
-FLÜSSIGSEIFE;PF0105SL300KA;nan;Liquid Soap Marseille 300ml KARITE | SHEA;3551780003462;300ml;11,00 €;22,00 €;6;3.0;33,00 €
-FLÜSSIGSEIFE;PF0105SL500KA;nan;Liquid Soap Marseille 495ml KARITE | SHEA;3551780002403;495ml;13,50 €;27,00 €;6;3.0;40,50 €
-FLÜSSIGSEIFE;PF0105SL01LKA;nan;Liquid Soap Marseille 1L Refill KARITE | SHEA;3551780003660;1000ml;18,00 €;36,00 €;6;nan; 	-     
-FLÜSSIGSEIFE;PF0105SL03LKA;nan;Liquid Soap Marseille 3L Refill KARITE | SHEA(Wird erst auf Anfrage bestellt);3551780009723;3 L;42,50 €;85,00 €;3;nan; 	-     
-HANDCREME;PF0105CM100KA;nan;Hand Cream 100ml KARITE | SHEA;3551780002410;100ml;12,50 €;25,00 €;6;3.0;37,50 €
-HANDCREME;PF0105CM030KA;nan;Hand Cream 30ml KARITE | SHEA;3551780002427;30ml;5,25 €;10,50 €;12;3.0;15,75 €
-KÖRPERPFLEGE;PF0105BC200KA;nan;Body Balm 200ml KARITE | SHEA;3551780007774;200ml;21,00 €;42,00 €;6;3.0;63,00 €
-KÖRPERPFLEGE;PF0105GC150KA;nan;Body Scrub 150ml KARITE | SHEA;3551780003165;150ml;20,00 €;40,00 €;6;3.0;60,00 €
-KÖRPERPFLEGE;PF0105GD300KA;nan;Cleansing Shower Oil 300ml KARITE | SHEA;3551780008368;300ml;13,00 €;26,00 €;6;3.0;39,00 €
-KÖRPERPFLEGE;PF0105HC100KA;nan;Ultra Nourishing Dry Oil 100ml KARITE | SHEA;3551780005268;100ml;23,50 €;47,00 €;6;3.0;70,50 €
-KÖRPERPFLEGE;PF0105ST005KA1;nan;Lip Balm 4,7g KARITE | SHEA;3551780004964;4,7g;5,00 €;10,00 €;25;25.0;125,00 €
-FLÜSSIGSEIFE;PF0117SL01LAL;nan;Liquid Soap Marseille 1L Refill ANISE LAVENDER;3551780008580;1000 ml;18,00 €;36,00 €;6;nan; 	-     
-FLÜSSIGSEIFE;PF0117SL01LBA;nan;Liquid Soap Marseille 1L Refill MINT BASIL;3551780008658;1000 ml;18,00 €;36,00 €;6;nan; 	-     
-FLÜSSIGSEIFE;PF0117SL500AL;nan;Liquid Soap Marseille 495ml ANISE LAVENDER;3551780008566;495 ml;13,50 €;27,00 €;6;3.0;40,50 €
-FLÜSSIGSEIFE;PF0117SL500BA;nan;Liquid Soap Marseille 495ml MINT BASIL;3551780008634;495 ml;13,50 €;27,00 €;6;3.0;40,50 €
-FLÜSSIGSEIFE;PF0117SL300AL;nan;Liquid Soap Marseille 300ml ANISE LAVENDER;3551780008573;300 ml;11,00 €;22,00 €;6;3.0;33,00 €
-FLÜSSIGSEIFE;PF0117SL300BA;nan;Liquid Soap Marseille 300ml MINT BASIL;3551780008641;300 ml;11,00 €;22,00 €;6;3.0;33,00 €
-HANDCREME;PF0117CM030AL;nan;Hand Cream 30ml ANISE LAVENDER;3551780008597;30 ml;5,25 €;10,50 €;12;6.0;31,50 €
-HANDCREME;PF0117CM030BA;nan;Hand Cream 30ml MINT BASIL;3551780008665;30 ml;5,25 €;10,50 €;12;6.0;31,50 €
-KÖRPERCREME;PF0117CC180AL;nan;Body Cream 180ml ANISE LAVENDER;3551780008603;180 ml;19,50 €;39,00 €;6;3.0;58,50 €
-KÖRPERCREME;PF0117CC180BA;nan;Body Cream 180ml MINT BASIL;3551780008672;180 ml;19,50 €;39,00 €;6;3.0;58,50 €
-KERZEN;PF0117BP150AL;nan;Scented Candle 150G ANISE LAVENDER;3551780008610;150 g;23,00 €;46,00 €;6;3.0;69,00 €
-KERZEN;PF0117BP150BA;nan;Scented Candle 150G MINT BASIL;3551780008689;150 g;23,00 €;46,00 €;6;3.0;69,00 €
-DIFFUSER;PF0117DP200AL;nan;Fragrance Diffuser 200ml ANISE LAVENDER;3551780008627;200 ml;25,50 €;51,00 €;6;3.0;76,50 €
-DIFFUSER;PF0117DP200BA;nan;Fragrance Diffuser 200ml MINT BASIL;3551780008696;200 ml;25,50 €;51,00 €;6;3.0;76,50 €
+Kategorie;articleordernumber;Bild;Artikelname;EAN;Größe;Purchaseprice;UVP;VE;Menge;Gesamt;manufacturer
+SENSITIVE;PF0118SL500SA;nan;Liquid Marseille Soap 495ml Sensitive Skin;3551780010842;495ml;12,50 €;25,00 €;6;3.0;37,50 €;La compagnie de provence
+SENSITIVE;PF0118SL01LSA;nan;Liquid Marseille Soap 1L Refill Sensitive Skin;3551780010859;1000ml;17,00 €;34,00 €;6;nan; 	-     ;La compagnie de provence
+SENSITIVE;PF0118SL300SA;nan;Liquid Marseille Soap 300ml Sensitive Skin;3551780010866;300ml;9,00 €;18,00 €;6;3.0;27,00 €;La compagnie de provence
+SENSITIVE;PF0118SS085SA;nan;Solid Face Cleanser 85g Sensitive Skin;3551780010873;85g;11,50 €;23,00 €;6;3.0;34,50 €;La compagnie de provence
+FACECARE;PF0115CV050AV;nan;Face Cream Sorbet Cream 50ml SEAWEED;3551780007095;50ml;16,00 €;32,00 €;6;nan; 	-     ;La compagnie de provence
+FACECARE;PF0105CV050KA;nan;Face Cream Silky Cream 50ml KARITE | SHEA;3551780008351;50ml;16,00 €;32,00 €;6;nan; 	-     ;La compagnie de provence
+FACECARE;PF0113HD140SK;nan;Cleansing Oil 140ml;3551780007507;140ml;16,00 €;32,00 €;6;nan; 	-     ;La compagnie de provence
+FACECARE;PF0113CV050FI;nan;Light Face Cream 50ml FIG ANTIOXYDANTE;3551780005725;50ml;25,00 €;50,00 €;6;nan; 	-     ;La compagnie de provence
+FACECARE;PF0113SE030FI;nan;Face Serum in Oil 30ml FIG ANTIOXYDANTE;3551780005701;30ml;26,00 €;52,00 €;6;nan; 	-     ;La compagnie de provence
+FACECARE;PF0113MV075FI;nan;Sleeping Face Mask 75ml FIG ANTIOXYDANTE;3551780005718;75ml;22,50 €;45,00 €;6;nan; 	-     ;La compagnie de provence
+LIMITED EDITION;PF0109SL500BS;nan;Liquid Soap Marseille 495ml FESTIVE PINE;3551780009495;495 ml;13,50 €;27,00 €;6;3.0;40,50 €;La compagnie de provence
+LIMITED EDITION;PF0109SL500BE;nan;Liquid Soap Marseille 495ml WOODS & SPICES;3551780009501;495 ml;13,50 €;27,00 €;6;3.0;40,50 €;La compagnie de provence
+LIMITED EDITION;PF0109BP150BS;nan;Scented Candle 150g FESTIVE PINE;3551780009518;150 gr;24,50 €;49,00 €;6;3.0;73,50 €;La compagnie de provence
+GIFT SETS;CO0105MU20221;nan;SHEA ESSENTIALS 2022 (Shower Oil 30ml, Handcream 30ml & Dry Oil 100ml);3551780009600;1 Stk.;29,50 €;59,00 €;4;nan; 	-     ;La compagnie de provence
+GIFT SETS;CO0103TN20221;nan;SOFT SKIN KIT - BLACK TEA 2022(Liquid Soap 495ml & Handcream 300ml);3551780009426;1 Stk.;26,50 €;53,00 €;4;nan; 	-     ;La compagnie de provence
+SEAWEED;PF0115CC200AV;nan;Ultra-Hydrating Body Cream 200ml SEAWEED;3551780007101;200ml;21,00 €;42,00 €;6;3.0;63,00 €;La compagnie de provence
+SEAWEED;PF0115CM075AV;nan;Ultra-Hydrating Hand Cream 75ml SEAWEED;3551780007132;75ml;11,00 €;22,00 €;6;3.0;33,00 €;La compagnie de provence
+SEAWEED;PF0115CM030AV;nan;Ultra-Hydrating Hand Cream 30ml SEAWEED;3551780007118;30ml;4,75 €;9,50 €;12;6.0;28,50 €;La compagnie de provence
+SEAWEED;PF0115SL300AV;nan;Liquid Soap Marseille 300ml SEAWEED;3551780009563;300 ml;11,00 €;22,00 €;6;3.0;33,00 €;La compagnie de provence
+SEAWEED;PF0115SL500AV;nan;Liquid Soap Marseille 495ml SEAWEED;3551780007088;495ml;13,50 €;27,00 €;6;3.0;40,50 €;La compagnie de provence
+SEAWEED;PF0115SL01LAV;nan;Liquid Soap Marseille 1L SEAWEED;3551780007392;1000ml;18,00 €;36,00 €;6;nan; 	-     ;La compagnie de provence
+SEAWEED;PF0115SL03LAV;nan;Liquid Soap Marseille 3L Refill SEAWEED(Wird erst auf Anfrage bestellt);3551780009716;3 L;42,50 €;85,00 €;3;nan; 	-     ;La compagnie de provence
+E X T R A  P U R;PF0101SL500EX;nan;Liquid Soap Marseille 495ml;3551780004483;495 ml;15,50 €;31,00 €;6;3.0;46,50 €;La compagnie de provence
+E X T R A  P U R;PF0101SL300EX;nan;Liquid Soap Marseille 300ml PET;3551780005367;300 ml;12,00 €;24,00 €;6;3.0;nan;La compagnie de provence
+E X T R A  P U R;PF0101SL03LEX;nan;Exfoliating Liquid Soap Marseille 3L Refill(Wird erst auf Anfrage bestellt);3551780009709;3 L;45,00 €;90,00 €;3;nan; 	-     ;La compagnie de provence
+FLÜSSIGSEIFE;PF0101SL300RV;nan;Liquid Soap Marseille 300ml REVITALIZING ROSEMARY;3551780007729;300ml;9,00 €;18,00 €;6;3.0;27,00 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0101SL300ME;nan;Liquid Soap Marseille 300ml MEDITERRANEAN SEA;3551780000263;300ml;9,00 €;18,00 €;6;3.0;27,00 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0101SL300LA;nan;Liquid Soap Marseille 300ml AROMATIC LAVENDER;3551780000256;300ml;9,00 €;18,00 €;6;3.0;27,00 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0101SL300FI;nan;Liquid Soap Marseille 300ml FIG OF PROVENCE;3551780000232;300ml;9,00 €;18,00 €;6;3.0;27,00 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0101SL300RO;nan;Liquid Soap Marseille 300ml WILD ROSE;3551780000294;300ml;9,00 €;18,00 €;6;3.0;27,00 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0101SL300VE;nan;Liquid Soap Marseille 300ml FRESH VERBENA;3551780000300;300ml;9,00 €;18,00 €;6;3.0;27,00 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0101SL300PA;nan;Liquid Soap Marseille 300ml PINK GRAPEFRUIT;3551780000287;300ml;9,00 €;18,00 €;6;3.0;27,00 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0101SL300CO;nan;Liquid Soap Marseille 300ml COTTON FLOWER;3551780000225;300ml;9,00 €;18,00 €;6;3.0;27,00 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0101SL300BO;nan;Liquid Soap Marseille 300ml OLIVE WOOD;3551780000218;300ml;9,00 €;18,00 €;6;3.0;27,00 €;La compagnie de provence
+500 ml Flüssigseife;PF0101SL500RV;nan;Liquid Soap Marseille 495ml REVITALIZING ROSEMARY;3551780007712;495ml;12,50 €;25,00 €;6;3.0;37,50 €;La compagnie de provence
+500 ml Flüssigseife;PF0101SL500ME;nan;Liquid Soap Marseille 495ml MEDITERRANEAN SEA;3551780000164;495ml;12,50 €;25,00 €;6;3.0;37,50 €;La compagnie de provence
+500 ml Flüssigseife;PF0101SL500LA;nan;Liquid Soap Marseille 495ml AROMATIC LAVENDER;3551780000157;495ml;12,50 €;25,00 €;6;3.0;37,50 €;La compagnie de provence
+500 ml Flüssigseife;PF0101SL500FI;nan;Liquid Soap Marseille 495ml FIG OF PROVENCE;3551780000133;495ml;12,50 €;25,00 €;6;3.0;37,50 €;La compagnie de provence
+500 ml Flüssigseife;PF0101SL500RO;nan;Liquid Soap Marseille 495ml WILD ROSE;3551780000195;495ml;12,50 €;25,00 €;6;3.0;37,50 €;La compagnie de provence
+500 ml Flüssigseife;PF0101SL500VE;nan;Liquid Soap Marseille 495ml FRESH VERBENA;3551780000201;495ml;12,50 €;25,00 €;6;3.0;37,50 €;La compagnie de provence
+500 ml Flüssigseife;PF0101SL500PA;nan;Liquid Soap Marseille 495ml PINK GRAPEFRUIT;3551780000188;495ml;12,50 €;25,00 €;6;3.0;37,50 €;La compagnie de provence
+500 ml Flüssigseife;PF0101SL500CO;nan;Liquid Soap Marseille 495ml COTTON FLOWER;3551780000126;495ml;12,50 €;25,00 €;6;3.0;37,50 €;La compagnie de provence
+500 ml Flüssigseife;PF0101SL500BO;nan;Liquid Soap Marseille 495ml OLIVE WOOD;3551780000119;495ml;12,50 €;25,00 €;6;3.0;37,50 €;La compagnie de provence
+1000 ml Flüssigseife-Refill;PF0101SL01LRV;nan;Liquid Soap Marseille 1L Refill REVITALIZING ROSEMARY;3551780007705;1000ml;17,00 €;34,00 €;6;nan; 	-     ;La compagnie de provence
+1000 ml Flüssigseife-Refill;PF0101SL01LME;nan;Liquid Soap Marseille 1L Refill MEDITERRANEAN SEA;3551780000065;1000 ml;17,00 €;34,00 €;6;nan; 	-     ;La compagnie de provence
+1000 ml Flüssigseife-Refill;PF0101SL01LLA;nan;Liquid Soap Marseille 1L Refill AROMATIC LAVENDER;3551780000058;1000 ml;17,00 €;34,00 €;6;nan; 	-     ;La compagnie de provence
+1000 ml Flüssigseife-Refill;PF0101SL01LFI;nan;Liquid Soap Marseille 1L Refill FIG OF PROVENCE;3551780000034;1000 ml;17,00 €;34,00 €;6;nan; 	-     ;La compagnie de provence
+1000 ml Flüssigseife-Refill;PF0101SL01LRO;nan;Liquid Soap Marseille 1L Refill WILD ROSE;3551780000096;1000 ml;17,00 €;34,00 €;6;nan; 	-     ;La compagnie de provence
+1000 ml Flüssigseife-Refill;PF0101SL01LVE;nan;Liquid Soap Marseille 1L Refill FRESH VERBENA;3551780000102;1000 ml;17,00 €;34,00 €;6;nan; 	-     ;La compagnie de provence
+1000 ml Flüssigseife-Refill;PF0101SL01LPA;nan;Liquid Soap Marseille 1L Refill PINK GRAPEFRUIT;3551780000089;1000 ml;17,00 €;34,00 €;6;nan; 	-     ;La compagnie de provence
+1000 ml Flüssigseife-Refill;PF0101SL01LCO;nan;Liquid Soap Marseille 1L Refill COTTON FLOWER;3551780000027;1000 ml;17,00 €;34,00 €;6;nan; 	-     ;La compagnie de provence
+1000 ml Flüssigseife-Refill;PF0101SL01LBO;nan;Liquid Soap Marseille 1L Refill OLIVE WOOD;3551780000010;1000 ml;17,00 €;34,00 €;6;nan; 	-     ;La compagnie de provence
+3 L Flüssigseife-Refill;PF0101SL03LCO;nan;Liquid Soap Marseille 3L Refill COTTON FLOWER (Wird erst auf Anfrage bestellt);3551780009686;3 L;35,00 €;70,00 €;3;nan; 	-     ;La compagnie de provence
+3 L Flüssigseife-Refill;PF0101SL03LVE;nan;"Liquid Soap Marseille 3L Refill FRESH VERBENA (Wird erst auf Anfrage bestellt)";3551780009693;3 L;35,00 €;70,00 €;3;nan; 	-     ;La compagnie de provence
+100 g Stückseife;PF0101SS100ME;nan;Scented Soap 100g MEDITERRANEAN SEA;3551780000461;100g;3,50 €;7,00 €;12;6.0;21,00 €;La compagnie de provence
+100 g Stückseife;PF0101SS100LA;nan;Scented Soap 100g AROMATIC LAVENDER;3551780000454;100g;3,50 €;7,00 €;12;6.0;21,00 €;La compagnie de provence
+100 g Stückseife;PF0101SS100FI;nan;Scented Soap 100g FIG OF PROVENCE;3551780000430;100g;3,50 €;7,00 €;12;6.0;21,00 €;La compagnie de provence
+100 g Stückseife;PF0101SS100RO;nan;Scented Soap 100g WILD ROSE;3551780000492;100g;3,50 €;7,00 €;12;6.0;21,00 €;La compagnie de provence
+100 g Stückseife;PF0101SS100VE;nan;Scented Soap 100g FRESH VERBENA;3551780000508;100g;3,50 €;7,00 €;12;6.0;21,00 €;La compagnie de provence
+100 g Stückseife;PF0101SS100PA;nan;Scented Soap 100g PINK GRAPEFRUIT;3551780000485;100g;3,50 €;7,00 €;12;6.0;21,00 €;La compagnie de provence
+100 g Stückseife;PF0101SS100CO;nan;Scented Soap 100g COTTON FLOWER;3551780000423;100g;3,50 €;7,00 €;12;6.0;21,00 €;La compagnie de provence
+100 g Stückseife;PF0101SS100BO;nan;Scented Soap 100g OLIVE WOOD;3551780000416;100g;3,50 €;7,00 €;12;6.0;21,00 €;La compagnie de provence
+HANDCREME;PF0101CM100ME;nan;Hand Cream 100ml MEDITERRANEAN SEA;3551780000669;100ml;11,50 €;23,00 €;6;3.0;34,50 €;La compagnie de provence
+HANDCREME;PF0101CM100LA;nan;Hand Cream 100ml AROMATIC LAVENDER;3551780000652;100ml;11,50 €;23,00 €;6;3.0;34,50 €;La compagnie de provence
+HANDCREME;PF0101CM100FI;nan;Hand Cream 100ml FIG OF PROVENCE;3551780000638;100ml;11,50 €;23,00 €;6;3.0;34,50 €;La compagnie de provence
+HANDCREME;PF0101CM100RO;nan;Hand Cream 100ml WILD ROSE;3551780000690;100ml;11,50 €;23,00 €;6;3.0;34,50 €;La compagnie de provence
+HANDCREME;PF0101CM100VE;nan;Hand Cream 100ml FRESH VERBENA;3551780000706;100ml;11,50 €;23,00 €;6;3.0;34,50 €;La compagnie de provence
+HANDCREME;PF0101CM100FO;nan;Hand Cream 100ml ORANGE BLOSSOM***;3551780000645;100ml;11,50 €;23,00 €;6;3.0;34,50 €;La compagnie de provence
+HANDCREME;PF0101CM100PA;nan;Hand Cream 100ml PINK GRAPEFRUIT;3551780000683;100ml;11,50 €;23,00 €;6;3.0;34,50 €;La compagnie de provence
+HANDCREME;PF0101CM100CO;nan;Hand Cream 100ml COTTON FLOWER;3551780000621;100ml;11,50 €;23,00 €;6;3.0;34,50 €;La compagnie de provence
+HANDCREME;PF0101CM100BO;nan;Hand Cream 100ml OLIVE WOOD;3551780000614;100ml;11,50 €;23,00 €;6;3.0;34,50 €;La compagnie de provence
+30 ml Handcreme;PF0101CM030RV;nan;Hand Cream 30ml REVITALIZING ROSEMARY;3551780007477;30ml;4,75 €;9,50 €;12;6.0;28,50 €;La compagnie de provence
+30 ml Handcreme;PF0101CM030AM;nan;Hand Cream 30ml SWEET ALMOND***;3551780003851;30ml;4,75 €;9,50 €;12;6.0;28,50 €;La compagnie de provence
+30 ml Handcreme;PF0101CM030ME;nan;Hand Cream 30ml MEDITERRANEAN SEA;3551780000768;30ml;4,75 €;9,50 €;12;6.0;28,50 €;La compagnie de provence
+30 ml Handcreme;PF0101CM030LA;nan;Hand Cream 30ml AROMATIC LAVENDER;3551780000751;30ml;4,75 €;9,50 €;12;6.0;28,50 €;La compagnie de provence
+30 ml Handcreme;PF0101CM030FI;nan;Hand Cream 30ml FIG OF PROVENCE;3551780000737;30ml;4,75 €;9,50 €;12;6.0;28,50 €;La compagnie de provence
+30 ml Handcreme;PF0101CM030RO;nan;Hand Cream 30ml WILD ROSE;3551780000799;30ml;4,75 €;9,50 €;12;6.0;28,50 €;La compagnie de provence
+30 ml Handcreme;PF0101CM030VE;nan;Hand Cream 30ml FRESH VERBENA;3551780000805;30ml;4,75 €;9,50 €;12;6.0;28,50 €;La compagnie de provence
+30 ml Handcreme;PF0101CM030PA;nan;Hand Cream 30ml PINK GRAPEFRUIT;3551780000782;30ml;4,75 €;9,50 €;12;6.0;28,50 €;La compagnie de provence
+30 ml Handcreme;PF0101CM030MI;nan;Hand Cream 30ml MIMOSA FLOWER***;3551780003899;30ml;4,75 €;9,50 €;12;6.0;28,50 €;La compagnie de provence
+30 ml Handcreme;PF0101CM030CO;nan;Hand Cream 30ml COTTON FLOWER;3551780000720;30ml;4,75 €;9,50 €;12;6.0;28,50 €;La compagnie de provence
+30 ml Handcreme;PF0101CM030BO;nan;Hand Cream 30ml OLIVE WOOD;3551780000713;30ml;4,75 €;9,50 €;12;6.0;28,50 €;La compagnie de provence
+DUSCHGEL;PF0101GD500AG;nan;Shower Gel 500ml SPARKLING CITRUS;3551780006098;500ml;14,00 €;28,00 €;6;3.0;42,00 €;La compagnie de provence
+DUSCHGEL;PF0101GD500CO;nan;Shower Gel 500ml COTTON FLOWER;3551780006104;500ml;14,00 €;28,00 €;6;3.0;42,00 €;La compagnie de provence
+DUSCHGEL;PF0101GD200AG;nan;Shower Gel 200ml SPARKLING CITRUS;3551780006869;200ml;6,00 €;12,00 €;6;3.0;18,00 €;La compagnie de provence
+HAND- UND KÖRPERLOTION;PF0101MC300RV;nan;Hand and Body Lotion 300ML REVITALIZING ROSEMARY;3551780007514;300ml;18,50 €;37,00 €;6;3.0; 	-     ;La compagnie de provence
+HAND- UND KÖRPERLOTION;PF0101MC300AG;nan;Hand and Body Lotion 300ML PET SPARKLING CITRUS;3551780006111;300 ml;18,50 €;37,00 €;6;3.0; 	-     ;La compagnie de provence
+HAND- UND KÖRPERLOTION;PF0101MC300CO;nan;Hand and Body Lotion 300ML PET COTTON FLOWER;3551780006128;300 ml;18,50 €;37,00 €;6;3.0; 	-     ;La compagnie de provence
+FLÜSSIGSEIFE;PF0112SL01LDE;nan;Liquid Soap Marseille 1L Refill REFILL DELICATE;3551780003622;1000ml;17,50 €;35,00 €;6;nan; 	-     ;La compagnie de provence
+FLÜSSIGSEIFE;PF0112SL01LCS;nan;Liquid Soap Marseille 1L Refill CASHMERE;3551780003639;1000ml;17,50 €;35,00 €;6;nan; 	-     ;La compagnie de provence
+FLÜSSIGSEIFE;PF0112SL300DE;nan;Liquid Soap Marseille 300ml DELICATE;3551780003585;300ml;11,00 €;22,00 €;6;3.0;33,00 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0112SL300CS;nan;Liquid Soap Marseille 300ml CASHMERE;3551780003592;300ml;11,00 €;22,00 €;6;3.0;33,00 €;La compagnie de provence
+HANDCREME;PF0112CM300DE;nan;Hand Cream 300ml DELICATE;3551780003608;300ml;16,50 €;33,00 €;6;3.0;49,50 €;La compagnie de provence
+HANDCREME;PF0112CM300CS;nan;Hand Cream 300ml CASHMERE;3551780003615;300ml;16,50 €;33,00 €;6;3.0;49,50 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0103SL01LTB1;nan;Liquid Soap Marseille 1L Refill WHITE TEA;3551780003134;1000ml;17,50 €;35,00 €;6;nan; 	-     ;La compagnie de provence
+FLÜSSIGSEIFE;PF0103SL01LTN1;nan;Liquid Soap Marseille 1L Refill REFILL BLACK TEA;3551780003158;1000ml;17,50 €;35,00 €;6;nan; 	-     ;La compagnie de provence
+FLÜSSIGSEIFE;CDP69522;nan;Liquid Soap Marseille 495ml WHITE TEA;3551780695223;500ml;13,00 €;26,00 €;6;3.0;39,00 €;La compagnie de provence
+FLÜSSIGSEIFE;CDP69523;nan;Liquid Soap Marseille 495ml BLACK TEA;3551780695230;500ml;13,00 €;26,00 €;6;3.0;39,00 €;La compagnie de provence
+FLÜSSIGSEIFE;CDP69422;nan;Liquid Soap Marseille 300ml WHITE TEA;3551780694226;300ml;11,00 €;22,00 €;6;3.0;33,00 €;La compagnie de provence
+FLÜSSIGSEIFE;CDP69423;nan;Liquid Soap Marseille 300ml BLACK TEA;3551780694233;300ml;11,00 €;22,00 €;6;3.0;33,00 €;La compagnie de provence
+HANDCREME;CDP69722;nan;Hand Cream 300ml WHITE TEA;3551780697227;300ml;16,50 €;33,00 €;6;3.0;49,50 €;La compagnie de provence
+HANDCREME;CDP69723;nan;Hand Cream 300ml BLACK TEA;3551780697234;300ml;16,50 €;33,00 €;6;3.0;49,50 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0105SL300KA;nan;Liquid Soap Marseille 300ml KARITE | SHEA;3551780003462;300ml;11,00 €;22,00 €;6;3.0;33,00 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0105SL500KA;nan;Liquid Soap Marseille 495ml KARITE | SHEA;3551780002403;495ml;13,50 €;27,00 €;6;3.0;40,50 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0105SL01LKA;nan;Liquid Soap Marseille 1L Refill KARITE | SHEA;3551780003660;1000ml;18,00 €;36,00 €;6;nan; 	-     ;La compagnie de provence
+FLÜSSIGSEIFE;PF0105SL03LKA;nan;Liquid Soap Marseille 3L Refill KARITE | SHEA(Wird erst auf Anfrage bestellt);3551780009723;3 L;42,50 €;85,00 €;3;nan; 	-     ;La compagnie de provence
+HANDCREME;PF0105CM100KA;nan;Hand Cream 100ml KARITE | SHEA;3551780002410;100ml;12,50 €;25,00 €;6;3.0;37,50 €;La compagnie de provence
+HANDCREME;PF0105CM030KA;nan;Hand Cream 30ml KARITE | SHEA;3551780002427;30ml;5,25 €;10,50 €;12;3.0;15,75 €;La compagnie de provence
+KÖRPERPFLEGE;PF0105BC200KA;nan;Body Balm 200ml KARITE | SHEA;3551780007774;200ml;21,00 €;42,00 €;6;3.0;63,00 €;La compagnie de provence
+KÖRPERPFLEGE;PF0105GC150KA;nan;Body Scrub 150ml KARITE | SHEA;3551780003165;150ml;20,00 €;40,00 €;6;3.0;60,00 €;La compagnie de provence
+KÖRPERPFLEGE;PF0105GD300KA;nan;Cleansing Shower Oil 300ml KARITE | SHEA;3551780008368;300ml;13,00 €;26,00 €;6;3.0;39,00 €;La compagnie de provence
+KÖRPERPFLEGE;PF0105HC100KA;nan;Ultra Nourishing Dry Oil 100ml KARITE | SHEA;3551780005268;100ml;23,50 €;47,00 €;6;3.0;70,50 €;La compagnie de provence
+KÖRPERPFLEGE;PF0105ST005KA1;nan;Lip Balm 4,7g KARITE | SHEA;3551780004964;4,7g;5,00 €;10,00 €;25;25.0;125,00 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0117SL01LAL;nan;Liquid Soap Marseille 1L Refill ANISE LAVENDER;3551780008580;1000 ml;18,00 €;36,00 €;6;nan; 	-     ;La compagnie de provence
+FLÜSSIGSEIFE;PF0117SL01LBA;nan;Liquid Soap Marseille 1L Refill MINT BASIL;3551780008658;1000 ml;18,00 €;36,00 €;6;nan; 	-     ;La compagnie de provence
+FLÜSSIGSEIFE;PF0117SL500AL;nan;Liquid Soap Marseille 495ml ANISE LAVENDER;3551780008566;495 ml;13,50 €;27,00 €;6;3.0;40,50 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0117SL500BA;nan;Liquid Soap Marseille 495ml MINT BASIL;3551780008634;495 ml;13,50 €;27,00 €;6;3.0;40,50 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0117SL300AL;nan;Liquid Soap Marseille 300ml ANISE LAVENDER;3551780008573;300 ml;11,00 €;22,00 €;6;3.0;33,00 €;La compagnie de provence
+FLÜSSIGSEIFE;PF0117SL300BA;nan;Liquid Soap Marseille 300ml MINT BASIL;3551780008641;300 ml;11,00 €;22,00 €;6;3.0;33,00 €;La compagnie de provence
+HANDCREME;PF0117CM030AL;nan;Hand Cream 30ml ANISE LAVENDER;3551780008597;30 ml;5,25 €;10,50 €;12;6.0;31,50 €;La compagnie de provence
+HANDCREME;PF0117CM030BA;nan;Hand Cream 30ml MINT BASIL;3551780008665;30 ml;5,25 €;10,50 €;12;6.0;31,50 €;La compagnie de provence
+KÖRPERCREME;PF0117CC180AL;nan;Body Cream 180ml ANISE LAVENDER;3551780008603;180 ml;19,50 €;39,00 €;6;3.0;58,50 €;La compagnie de provence
+KÖRPERCREME;PF0117CC180BA;nan;Body Cream 180ml MINT BASIL;3551780008672;180 ml;19,50 €;39,00 €;6;3.0;58,50 €;La compagnie de provence
+KERZEN;PF0117BP150AL;nan;Scented Candle 150G ANISE LAVENDER;3551780008610;150 g;23,00 €;46,00 €;6;3.0;69,00 €;La compagnie de provence
+KERZEN;PF0117BP150BA;nan;Scented Candle 150G MINT BASIL;3551780008689;150 g;23,00 €;46,00 €;6;3.0;69,00 €;La compagnie de provence
+DIFFUSER;PF0117DP200AL;nan;Fragrance Diffuser 200ml ANISE LAVENDER;3551780008627;200 ml;25,50 €;51,00 €;6;3.0;76,50 €;La compagnie de provence
+DIFFUSER;PF0117DP200BA;nan;Fragrance Diffuser 200ml MINT BASIL;3551780008696;200 ml;25,50 €;51,00 €;6;3.0;76,50 €;La compagnie de provence

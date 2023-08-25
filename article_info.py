@@ -1,26 +1,50 @@
 import streamlit as st
-import csv
+import pandas as pd 
+import ast
 
-def show_articles_information(df):
+def show_articles_information_fetched(df):
     for index, row in df.iterrows():
         images = row['product_photos']
-        if images is not None:  # Add a check for None values
-            with st.expander(row['artikelordernummer'], expanded=index<3):  # Expand the first 3 products
-                # Create columns for product visualization
-                cols = st.columns([1,2])  # Adjust the width of the columns
-                # Create a new column for each image and display it
-                for i in range(0, len(images), 2):  # Loop through images two at a time
+        if images is not None: 
+            with st.expander(row['articleordernumber'], expanded=index<1):
+                cols = st.columns([1,2]) 
+                for i in range(0, len(images), 2):
                     with cols[0].container():
-                        image_cols = st.columns(2)  # Create two columns for images
+                        image_cols = st.columns(2)
                         image_cols[0].image(images[i], use_column_width="auto")
-                        if i+1 < len(images):  # Check if there is a second image to display
+                        if i+1 < len(images): 
                             image_cols[1].image(images[i+1], use_column_width="auto")
-                # Display product details in the second column
-                cols[1].markdown(f"**Artikelname:** {row['Artikelname']}")
-                cols[1].markdown(f"**EAN:** {row['EAN']}")
-                cols[1].markdown(f"**Meta titel:** {row['Meta titel']}")
-                cols[1].markdown(f"**Produktbeschreibung:** {row['Produktbeschreibung']}")
-                cols[1].markdown(f"**Anwendung:** {row['Anwendung']}")
-                cols[1].markdown(f"**Inhaltsstoffe:** {row['Inhaltsstoffe']}")
-                cols[1].markdown(f"**product_description:** {row['product_description']}")
-                cols[1].markdown(f"**product_attributes:** {row['product_attributes']}")
+                cols[1].markdown(f"**Artikelname:** {row['Artikelname']}" if 'Artikelname' in df.columns else "")
+                cols[1].markdown(f"**EAN:** {row['EAN']}" if 'EAN' in df.columns else "")
+                cols[1].markdown(f"**Meta titel:** {row['Metatitel']}" if 'Metatitel' in df.columns else "")
+                cols[1].markdown(f"**Produktbeschreibung:** {row['Beschreibung']}" if 'Beschreibung' in df.columns else "")
+                cols[1].markdown(f"**Anwendung:** {row['Anwendung']}" if 'Anwendung' in df.columns else "")
+                cols[1].markdown(f"**Inhaltsstoffe:** {row['inci']}" if 'inci' in df.columns else "")
+                cols[1].markdown(f"**product_description:** {row['product_description']}" if 'product_description' in df.columns else "")
+                cols[1].markdown(f"**product_attributes:** {row['product_attributes']}" if 'product_attributes' in df.columns else "")
+def show_articles_information_csv(df):
+   for index, row in df.iterrows():
+        images = row.get('product_photos', None)
+        if images:
+
+            images = ast.literal_eval(images)
+        else:
+            images = []
+
+        with st.expander(row['articleordernumber'] if 'articleordernumber' in df.columns else "Unknown", expanded=index<1):
+            cols = st.columns([1,2]) 
+
+            for i in range(0, len(images), 2):
+                with cols[0].container():
+                    image_cols = st.columns(2)
+                    image_cols[0].image(images[i], use_column_width="auto")
+                    if i+1 < len(images): 
+                        image_cols[1].image(images[i+1], use_column_width="auto")
+                cols[1].markdown(f"**Artikelname:** {row['Artikelname']}" if 'Artikelname' in df.columns else "")
+                cols[1].markdown(f"**EAN:** {row['EAN']}" if 'EAN' in df.columns else "")
+                cols[1].markdown(f"**Meta titel:** {row['Metatitel']}" if 'Metatitel' in df.columns else "")
+                cols[1].markdown(f"**Produktbeschreibung:** {row['Beschreibung']}" if 'Beschreibung' in df.columns else "")
+                cols[1].markdown(f"**Anwendung:** {row['Anwendung']}" if 'Anwendung' in df.columns else "")
+                cols[1].markdown(f"**Inhaltsstoffe:** {row['inci']}" if 'inci' in df.columns else "")
+                cols[1].markdown(f"**product_description:** {row['product_description']}" if 'product_description' in df.columns else "")
+                cols[1].markdown(f"**product_attributes:** {row['product_attributes']}" if 'product_attributes' in df.columns else "")
