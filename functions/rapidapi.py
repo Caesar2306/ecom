@@ -1,7 +1,7 @@
 import pandas as pd
 import requests
 import time
-from env_utilities import get_rapid_api_key, get_rapid_api_host
+from functions.env_utilities import get_rapid_api_key, get_rapid_api_host
 
 url = "https://real-time-product-search.p.rapidapi.com/search"
 
@@ -50,7 +50,7 @@ def extend_dataframe(df):
                 print(f"No data returned from API for product {i+1} with EAN{ean}.")
         except Exception as e:
             print(f"Error making API call for product {i+1} with EAN{ean}: {e}")
-        time.sleep(1)  # pause for 1 second
+        # time.sleep(1)  # pause for 1 second
 
     print("Data extended successfully.")
     return extended_df

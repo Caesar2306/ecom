@@ -1,5 +1,4 @@
-import streamlit as st
-import pandas as pd 
+import streamlit as st 
 import ast
 
 def show_articles_information_fetched(df):

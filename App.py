@@ -1,18 +1,14 @@
-
-
 import streamlit as st
-from dotenv import load_dotenv
 from functions.get_products import get_products
 from functions.update_products import update_products
 from functions.delete_products import delete_products
 from functions.import_products import import_products
 from functions.chat_GPT import chat_GPT
-from env_utilities import get_backend_username,get_rapid_api_key,get_testsystem_api,get_testsystem_url,get_localsystem_api,get_localsystem_url,get_chat_gpt_api_key
-load_dotenv()
+from functions.env_utilities import get_backend_username,get_rapid_api_key,get_testsystem_api,get_testsystem_url,get_localsystem_api,get_localsystem_url,get_chat_gpt_api_key
 
 st.set_page_config(
    page_title="Product Extender",
-   page_icon=":smile:",
+   page_icon=":computer:",
    layout="wide",
    initial_sidebar_state="expanded",
 )

@@ -1,8 +1,7 @@
-
 import streamlit as st
 import pandas as pd
 import requests
-from shared_functions import get_auth
+from functions.shared_functions import get_auth
 
 def get_filters(columns, mysql_expressions,key):
     filters = []
@@ -159,7 +158,7 @@ def get_products():
     ]
     mysql_expressions = ["LIKE", "=", ">=", "<=", ">", "<", "IN"]
     st.subheader('Find product using Ordernumber')
-    # Multi-select input in Streamlit
+
     selected_fields = st.multiselect(
         "Choose the fields you want to display",
         options=available_fields,

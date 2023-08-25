@@ -1,10 +1,9 @@
 import streamlit as st
-from dotenv import load_dotenv
-from gpt_functions import ChatGPT
-from env_utilities import get_chat_gpt_api_key
-load_dotenv()
-# Access the environment variables
+from functions.gpt_functions import ChatGPT
+from functions.env_utilities import get_chat_gpt_api_key
+
 chat_gpt_api = get_chat_gpt_api_key()
+
 # Initialize ChatGPT
 def chat_GPT():
     chat_gpt = ChatGPT(chat_gpt_api)

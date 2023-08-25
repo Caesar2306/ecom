@@ -1,11 +1,9 @@
-
-
 import streamlit as st
-from gpt_functions import ChatGPT
+from functions.gpt_functions import ChatGPT
 import requests
-from shared_functions import get_auth
+from functions.shared_functions import get_auth
 from functions.get_products import get_articles_df_save_to_cache
-from env_utilities import get_chat_gpt_api_key
+from functions.env_utilities import get_chat_gpt_api_key
 def get_article_by_id(article_id):
         response = requests.get(f"{st.session_state.shopware_url}articles/{article_id}", auth=get_auth())
         if response.status_code == 200:

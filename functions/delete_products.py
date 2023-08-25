@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
-from shared_functions import get_auth_local
-from env_utilities import get_localsystem_url
+from functions.shared_functions import get_auth_local
+from functions.env_utilities import get_localsystem_url
 
 def delete_articles(product_ids_list, product_numbers_list):
     # Constructing the payload based on provided product IDs and numbers
