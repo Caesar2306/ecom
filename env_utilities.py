@@ -14,6 +14,9 @@ def get_backend_username():
 def get_rapid_api_key():
     return os.getenv('RAPID_API_KEY')
 
+def get_rapid_api_host():
+    return os.getenv('RAPID_API_HOST')
+
 def get_testsystem_api():
     return os.getenv('TESTSYSTEM_API')
 

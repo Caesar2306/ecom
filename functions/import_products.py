@@ -3,17 +3,31 @@ import streamlit as st
 import pandas as pd
 import requests
 from shared_functions import get_auth
-def import_products():
-    def add_product(data):
+from rapidapi import extend_dataframe 
+def add_product(data):
         response = requests.post(f"{st.session_state.shopware_url}articles/", auth=get_auth(), json=data)
         if response.status_code == 200 or response.status_code == 201:
             return True, ''
         else:
             return False, response.text  # Return the API error message
         
+def import_products():
     st.title("Import Products")
-    df_files = pd.read_csv("/Users/euphorika/Desktop/ecom/inputs/compagnie_de_provence_extended.csv", delimiter=';', encoding='utf-8', nrows=5)
-    st.write(df_files.head(10))
+
+    nrows = st.number_input("Enter the number of rows to read", min_value=1, value=5)  # Default value is 5
+    # Allow users to upload a CSV file
+    uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
+
+    # Check if a file has been uploaded. If not, use the default file
+    if uploaded_file is not None:
+        df_files = pd.read_csv(uploaded_file, delimiter=';', encoding='utf-8', nrows=nrows)
+    else:
+        default_file_path = "/Users/euphorika/Desktop/ecom/inputs/compagnie_de_provence_extended.csv"
+        df_files = pd.read_csv(default_file_path, delimiter=';', encoding='utf-8', nrows=nrows)
+
+    if st.button('Extend dataframe using Real-time-product-search?'):
+        df_files = extend_dataframe(df_files)
+    st.dataframe(df_files.head(nrows))
 
 
     if st.button('Add Products from CSV'):

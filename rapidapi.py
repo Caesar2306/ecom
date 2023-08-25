@@ -1,15 +1,16 @@
 import pandas as pd
 import requests
 import time
+from env_utilities import get_rapid_api_key, get_rapid_api_host
 
+url = "https://real-time-product-search.p.rapidapi.com/search"
+
+headers = {
+    "X-RapidAPI-Key": get_rapid_api_key(),
+    "X-RapidAPI-Host": get_rapid_api_host()
+}
 def extend_dataframe(df):
-    url = "https://real-time-product-search.p.rapidapi.com/search"
-
-    headers = {
-        "X-RapidAPI-Key": "117f8f95a0mshba88c83b1911e30p11685fjsn67151fcbd4f5",
-        "X-RapidAPI-Host": "real-time-product-search.p.rapidapi.com"
-    }
-
+    # Extends given dataframe with 3 columns (can be changed if needed, should be checked in resposne)
     # Replace string spaces with actual NaN
     df = df.replace(r'^\s*$', pd.NA, regex=True)
 
@@ -53,3 +54,18 @@ def extend_dataframe(df):
 
     print("Data extended successfully.")
     return extended_df
+def get_product_by_ean(ean):
+    # Single product search, gives dictionary back
+    querystring = {"q": ean, "country": "de", "language": "de"}
+
+    try:
+        response = requests.get(url, headers=headers, params=querystring)
+        response_data = response.json()
+        if response_data['data']:
+            return response_data['data'][0]  # Return the product data
+        else:
+            print(f"No data returned from API for product with EAN {ean}.")
+            return None
+    except Exception as e:
+        print(f"Error making API call for product with EAN {ean}: {e}")
+        return None
